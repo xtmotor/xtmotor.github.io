@@ -1,1 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Taller mecánico en Figueres. Reparación de coches, neumáticos, y más servicios.">
+    <title>XT Motor - Taller Mecánico Figueres</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
 
+        /* Estilos del Header */
+        header {
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ff7f32;
+        }
+
+        header .logo {
+            width: 150px;
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        header nav a:hover {
+            color: #ff7f32;
+        }
+
+        /* Banner de imagen de la fachada */
+        .header-banner {
+            position: relative;
+            background-image: url('https://github.com/xtmotor/xtmotor.github.io/blob/main/fachada.jpg?raw=true');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            text-align: center;
+            color: white;
+        }
+
+        .header-banner .header-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .header-banner h1 {
+            font-size: 80px;
+            font-weight: bold;
+            text-shadow: 3px 3px 5px rgba(255, 127, 50, 0.7); /* Sombra naranja */
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+
+        .header-banner p {
+            font-size: 24px; /* Aumento del tamaño */
+        }
+
+        /* Estilos de la sección principal */
+        main {
+            padding: 40px 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* Títulos */
+        h1, h2 {
+            text-align: center;
+            color: #ff7f32;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 36px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .service-item {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            color: black;
+            border: 2px solid #ff7f32;
+            box-shadow: 0 0 10px rgba(255, 127, 50, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service-item h3 {
+            margin-top: 0;
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 127, 50, 0.8);
+        }
+
+        /* Estilos de la sección de contacto */
+        .contact-section {
+            background-color: white;
+            padding: 40px;
+            border: 2px solid #ff7f32;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ff7f32;
+        }
+
+        .contact-section p {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .contact-section a {
+            color: #ff7f32;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #ff7f32;
+            text-decoration: none;
+        }
+
+        /* Estilos del menú desplegable en pantallas pequeñas */
+        @media (max-width: 768px) {
+            header {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header con solo "Servicios" y "Contacto" -->
+    <header>
+        <img src="https://github.com/xtmotor/xtmotor.github.io/blob/main/logo_transparent.png?raw=true" alt="Logo XT Motor" class="logo">
+        <nav>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Banner con la imagen de la fachada -->
+    <div class="header-banner">
+        <div class="header-content">
+            <h1>XTmotor</h1>
+            <p>Cuidado y mantenimiento de tu vehículo en Figueres</p>
+        </div>
+    </div>
+
+    <!-- Sección principal -->
+    <main>
+        <h1>Nuestros Servicios</h1>
+        <p style="text-align:center;">Más información en <a href="tel:+34972503067">972 50 30 67</a>.</p>
+
+        <!-- Sección de servicios -->
+        <div class="services" id="servicios">
+            <div class="service-item">
+                <h3>Reparación de Coches</h3>
+                <p>Realizamos reparaciones de todos los tipos de vehículos, desde coches hasta furgonetas.</p>
+            </div>
+            <div class="service-item">
+                <h3>Cambio de Neumáticos</h3>
+                <p>Cambio y reparación de neumáticos, con neumáticos de alta calidad para garantizar tu seguridad.</p>
+            </div>
+            <div class="service-item">
+                <h3>Aire Acondicionado</h3>
+                <p>Recarga de aire acondicionado y reparación de sistemas de climatización.</p>
+            </div>
+            <div class="service-item">
+                <h3>Revisión y Mantenimiento</h3>
+                <p>Revisión general del vehículo y mantenimiento preventivo para alargar la vida útil de tu coche.</p>
+            </div>
+            <div class="service-item">
+                <h3>Frenos</h3>
+                <p>Reemplazo y revisión del sistema de frenos para garantizar tu seguridad en la carretera.</p>
+            </div>
+            <div class="service-item">
+                <h3>Escapes</h3>
+                <p>Reparación y sustitución de sistemas de escape, mejorando la eficiencia y reduciendo las emisiones.</p>
+            </div>
+            <div class="service-item">
+                <h3>Diagnóstico Electrónico</h3>
+                <p>Diagnóstico completo de los sistemas electrónicos del vehículo para detectar y reparar fallos rápidamente.</p>
+            </div>
+            <div class="service-item">
+                <h3>Suspensión</h3>
+                <p>Reparación de sistemas de suspensión, mejorando la estabilidad y el confort del vehículo.</p>
+            </div>
+        </div>
+
+        <!-- Sección de contacto -->
+        <div class="contact-section" id="contacto">
+            <h2>Contacta con nosotros</h2>
+            <p>Teléfono: <a href="tel:+34972503067">972 503067</a></p>
+            <p>Dirección: <a href="https://www.google.com/maps/place/Calle+Torres+i+Bages,+26,+Figueres" target="_blank">Calle Torres i Bages, 26, Figueres</a></p>
+            <p>Email: <a href="mailto:xtmotor@hotmail.es">xtmotor@hotmail.es</a></p>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 XT Motor. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
