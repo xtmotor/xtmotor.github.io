@@ -127,28 +127,51 @@
         /* Estilos de la sección de contacto */
         .contact-section {
             background-color: white;
-            padding: 40px;
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 50px;
             border: 2px solid #ff7f32;
             border-radius: 10px;
-            text-align: center;
-            margin-top: 40px;
         }
 
         .contact-section h2 {
             font-size: 36px;
             margin-bottom: 20px;
             color: #ff7f32;
+            font-weight: bold;
         }
 
         .contact-section p {
             font-size: 20px;
-            margin-bottom: 10px;
+            margin: 10px 0;
+            color: #333;
         }
 
-        .contact-section a {
-            color: #ff7f32;
-            font-size: 20px;
-            text-decoration: underline;
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .contact-buttons a {
+            background-color: #ff7f32;
+            color: white;
+            padding: 15px 25px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-buttons a:hover {
+            background-color: #e56d2c;
+        }
+
+        .contact-buttons img {
+            width: 30px;
+            height: 30px;
         }
 
         footer {
@@ -233,10 +256,26 @@
 
         <!-- Sección de contacto -->
         <div class="contact-section" id="contacto">
-            <h2>Contacta con nosotros</h2>
-            <p>Teléfono: <a href="tel:+34972503067">972 503067</a></p>
-            <p>Dirección: <a href="https://www.google.com/maps/place/Calle+Torres+i+Bages,+26,+Figueres" target="_blank">Calle Torres i Bages, 26, Figueres</a></p>
+            <h2>¿Problemas con tu coche?</h2>
+            <p>Llámanos al 972 503067 o envíanos un mail y te ayudaremos</p>
+
+            <!-- Botones de contacto -->
+            <div class="contact-buttons">
+                <a href="tel:972503067">
+                    <img src="https://img.icons8.com/ios/50/ffffff/whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="mailto:xtmotor@hotmail.es">
+                    <img src="https://img.icons8.com/ios/50/ffffff/email.png" alt="Correo Electrónico">
+                </a>
+                <a href="https://www.google.com/maps?q=Calle+torres+i+bages+26,+Figueres">
+                    <img src="https://img.icons8.com/ios/50/ffffff/marker.png" alt="Ubicación">
+                </a>
+            </div>
+
+            <!-- Detalles de contacto -->
+            <p>Teléfono: <a href="tel:972503067">972 503067</a></p>
             <p>Email: <a href="mailto:xtmotor@hotmail.es">xtmotor@hotmail.es</a></p>
+            <p>Dirección: <a href="https://www.google.com/maps/place/Calle+Torres+i+Bages,+26,+Figueres" target="_blank">Calle Torres i Bages, 26, Figueres</a></p>
         </div>
     </main>
 
