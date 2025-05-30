@@ -40,6 +40,7 @@
       color: #333;
       font-weight: bold;
       font-size: 18px;
+      cursor: pointer;  /* Cambiar cursor a puntero en el menú */
     }
     header nav a:hover {
       color: #ff7f32;
@@ -235,8 +236,9 @@
       class="logo"
     />
     <nav>
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
+      <!-- Cambié el href por un id para controlarlo con JS -->
+      <a id="scrollToServicios">Servicios</a>
+      <a id="scrollToContacto">Contacto</a>
     </nav>
   </header>
 
@@ -256,10 +258,10 @@
       </p>
     </section>
 
-    <h1>Nuestros Servicios</h1>
+    <h1 id="nuestros-servicios">Nuestros Servicios</h1>
     <p style="text-align:center;">
       Más información en
-      <a href="tel:972503067">972 503 067</a>.<br />
+      <a href="tel:972503067">972 503 067</a>.
     </p>
 
     <div class="services" id="servicios">
@@ -395,6 +397,26 @@
           }
         }
       });
+    });
+
+    // Selecciona el enlace y las secciones de servicios y contacto
+    const scrollToServicios = document.getElementById('scrollToServicios');
+    const scrollToContacto = document.getElementById('scrollToContacto');
+    const serviciosSection = document.getElementById('servicios');
+    const contactoSection = document.getElementById('contacto');
+
+    // Añadir evento de clic para Servicios
+    scrollToServicios.addEventListener('click', (event) => {
+      event.preventDefault();  // Evitar el cambio en la URL
+      // Desplazarse a la sección de servicios
+      serviciosSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    // Añadir evento de clic para Contacto
+    scrollToContacto.addEventListener('click', (event) => {
+      event.preventDefault();  // Evitar el cambio en la URL
+      // Desplazarse a la sección de contacto
+      contactoSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   </script>
 </body>
