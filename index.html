@@ -325,14 +325,14 @@
       </p>
 
       <div class="contact-buttons">
-        <a href="tel:972503067" aria-label="Llámanos al 972 503 067">
+        <a href="tel:972503067" class="copy-btn" data-copy="972 503 067" aria-label="Llámanos al 972 503 067">
           <img
             src="https://img.icons8.com/ios-filled/50/ffffff/phone.png"
             alt="Teléfono"
           />
           972 503 067
         </a>
-        <a href="mailto:xtmotor@hotmail.es" aria-label="Envíanos un correo electrónico">
+        <a href="mailto:xtmotor@hotmail.es" class="copy-btn" data-copy="xtmotor@hotmail.es" aria-label="Envíanos un correo electrónico">
           <img
             src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png"
             alt="Correo electrónico"
@@ -343,6 +343,8 @@
           href="https://www.google.com/maps?q=Calle+torres+i+bages+26,+Figueres"
           target="_blank"
           rel="noopener noreferrer"
+          class="copy-btn"
+          data-copy="Calle Torres i Bages, 26, Figueres"
           aria-label="Ubicación en Google Maps"
         >
           <img
@@ -352,11 +354,44 @@
           Calle Torres i Bages, 26, Figueres
         </a>
       </div>
+
+      <div id="copy-feedback">¡Copiado!</div>
     </div>
   </main>
 
   <footer>
     <p>&copy; 2025 XT Motor. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.copy-btn');
+    const feedback = document.getElementById('copy-feedback');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', async e => {
+        // Verifica si el dispositivo es móvil
+        if (/Mobi|Android/i.test(navigator.userAgent)) {
+          e.preventDefault(); // Evita abrir el enlace inmediatamente en móvil
+          const text = btn.getAttribute('data-copy');
+          const href = btn.getAttribute('href');
+
+          try {
+            await navigator.clipboard.writeText(text);
+            feedback.classList.add('show');
+            setTimeout(() => feedback.classList.remove('show'), 1500);
+          } catch {
+            alert('Error al copiar al portapapeles');
+          }
+
+          // Enlace en nueva pestaña si es un dispositivo móvil
+          if (href.startsWith('https://') || href.startsWith('http://')) {
+            window.open(href, '_blank', 'noopener');
+          } else {
+            window.location.href = href;
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
