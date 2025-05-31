@@ -346,19 +346,18 @@
           xtmotor@hotmail.es
         </a>
         <a
-          href="https://www.google.com/maps?q=Calle+torres+i+bages+26,+Figueres"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="copy-btn"
-          data-copy="Calle Torres i Bages, 26, Figueres"
-          aria-label="Ubicación en Google Maps"
-        >
-          <img
-            src="https://img.icons8.com/ios-filled/50/ffffff/marker.png"
-            alt="Ubicación"
-          />
-          Calle Torres i Bages, 26, Figueres
-        </a>
+        href="https://www.google.com/maps?q=Calle+torres+i+bages+26,+Figueres"
+        class="copy-btn"
+        data-copy="Calle Torres i Bages, 26, Figueres"
+        aria-label="Ubicación en Google Maps"
+        id="maps-link"
+       >
+      <img
+        src="https://img.icons8.com/ios-filled/50/ffffff/marker.png"
+        alt="Ubicación"
+      />
+      Calle Torres i Bages, 26, Figueres
+      </a>
       </div>
 
       <div id="copy-feedback">¡Copiado!</div>
@@ -376,25 +375,30 @@
     buttons.forEach(btn => {
       btn.addEventListener('click', async e => {
         // Verifica si el dispositivo es móvil
-        if (/Mobi|Android/i.test(navigator.userAgent)) {
-          e.preventDefault(); // Evita abrir el enlace inmediatamente en móvil
-          const text = btn.getAttribute('data-copy');
-          const href = btn.getAttribute('href');
+        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        const text = btn.getAttribute('data-copy');
+        const href = btn.getAttribute('href');
 
-          try {
-            await navigator.clipboard.writeText(text);
-            feedback.classList.add('show');
-            setTimeout(() => feedback.classList.remove('show'), 1500);
-          } catch {
-            alert('Error al copiar al portapapeles');
-          }
+        e.preventDefault(); // siempre evitamos el comportamiento por defecto
+        try {
+          await navigator.clipboard.writeText(text);
+          feedback.classList.add('show');
+          setTimeout(() => feedback.classList.remove('show'), 1500);
+        } catch {
+          alert('Error al copiar al portapapeles');
+        }
 
-          // Enlace en nueva pestaña si es un dispositivo móvil
-          if (href.startsWith('https://') || href.startsWith('http://')) {
-            window.open(href, '_blank', 'noopener');
-          } else {
+        // Si es enlace externo (maps o correo)
+        if (href.startsWith('http') || href.startsWith('mailto') || href.startsWith('tel')) {
+          // Si es móvil, redirige en la misma pestaña
+          if (isMobile) {
             window.location.href = href;
+          } else {
+            // En escritorio, abre en nueva pestaña
+            window.open(href, '_blank', 'noopener');
           }
+        } else {
+          window.location.href = href;
         }
       });
     });
