@@ -2,167 +2,413 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="XTmotor es un taller mecánico en Figueres especializado en reparación de coches, cambio de neumáticos, aire acondicionado y más. Calidad y confianza.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>XT Motor - Taller Mecánico en Figueres | Reparación y Mantenimiento de Coches</title>
+
+  <meta name="description" content="XT Motor es tu taller mecánico de confianza en Figueres. Ofrecemos reparación de coches, cambio de neumáticos, mantenimiento y más." />
+  <meta name="keywords" content="taller mecánico Figueres, reparación de coches, mantenimiento de vehículos, cambio neumáticos, XT Motor" />
+  <meta name="author" content="XT Motor" />
   <meta name="robots" content="index, follow" />
+
   <link rel="canonical" href="https://www.xtmotor.es/" />
-  <meta property="og:title" content="XTmotor - Taller Mecánico en Figueres" />
-  <meta property="og:description" content="Reparación de coches, neumáticos, aire acondicionado y más. Visítanos en Figueres." />
-  <meta property="og:image" content="https://github.com/xtmotor/xtmotor.github.io/blob/main/logo_transparent.webp?raw=true" />
-  <meta property="og:url" content="https://www.xtmotor.es/" />
-  <meta property="og:type" content="website" />
-  <title>XTmotor | Taller Mecánico en Figueres</title>
+  <link rel="icon" href="https://raw.githubusercontent.com/xtmotor/xtmotor.github.io/refs/heads/main/logo_pesta%C3%B1a.ico" type="image/x-icon" />
+
+  <!-- Datos estructurados para SEO local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "XT Motor",
+    "image": "https://github.com/xtmotor/xtmotor.github.io/blob/main/logo_transparent.webp?raw=true",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Torres i Bages, 26",
+      "addressLocality": "Figueres",
+      "addressRegion": "Cataluña",
+      "postalCode": "17600",
+      "addressCountry": "ES"
+    },
+    "telephone": "+34 972503067",
+    "url": "https://www.xtmotor.es/",
+    "openingHours": "Mo-Fr 09:00-13:00 15:00-19:00",
+    "description": "Taller mecánico en Figueres especializado en reparación de coches, cambio de neumáticos, aire acondicionado y diagnóstico electrónico.",
+    "priceRange": "€€"
+  }
+  </script>
+
   <style>
+    /* Estilos generales */
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
       color: #333;
-      line-height: 1.6;
     }
+    /* Header */
     header {
-      background-color: #ff6600;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-    }
-    header img {
-      max-width: 100px;
-    }
-    main {
+      background-color: white;
       padding: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #ff7f32;
     }
-    h1, h2 {
-      color: #ff6600;
+    header .logo {
+      width: 150px;
     }
+    header nav {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      width: 100%;
+    }
+    header nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    header nav a:hover {
+      color: #ff7f32;
+    }
+    /* Banner */
+    .header-banner {
+      position: relative;
+      background-image: url('https://github.com/xtmotor/xtmotor.github.io/blob/main/fachada.webp?raw=true');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      text-align: center;
+      color: white;
+    }
+    .header-banner .header-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .header-banner h1 {
+      font-size: 80px;
+      font-weight: bold;
+      text-shadow: 3px 3px 5px rgba(255, 127, 50, 0.7);
+      font-family: 'Arial', sans-serif;
+      color: white;
+    }
+    .header-banner p {
+      font-size: 24px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    }
+    /* Main */
+    main {
+      padding: 40px 20px;
+      background-color: #f4f4f4;
+    }
+    .presentation-section {
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+      font-size: 22px;
+      color: #333333;
+      font-weight: 500;
+      line-height: 1.5;
+      border-left: 6px solid #ff7f32;
+      padding-left: 20px;
+      font-family: Arial, sans-serif;
+    }
+    /* Titles */
+    h1,
+    h2 {
+      text-align: center;
+      color: #ff7f32;
+    }
+    h1 {
+      font-size: 40px;
+    }
+    h2 {
+      font-size: 36px;
+    }
+    /* Services */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       margin-top: 20px;
     }
-    .service {
-      background-color: #fff;
+    .service-item {
+      background-color: white;
       padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: center;
+      border-radius: 10px;
+      color: black;
+      border: 2px solid #ff7f32;
+      box-shadow: 0 0 10px rgba(255, 127, 50, 0.5);
+      transition: transform 0.3s ease-in-out;
     }
-    .service img {
-      width: 60px;
-      margin-bottom: 10px;
+    .service-item h3 {
+      margin-top: 0;
     }
-    .contact {
-      margin-top: 40px;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    .service-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 127, 50, 0.8);
     }
-    .contact button {
-      background-color: #ff6600;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      margin-top: 10px;
-      cursor: pointer;
+    /* Contact */
+    .contact-section {
+      background-color: white;
+      padding: 50px 20px;
+      text-align: center;
+      margin-top: 50px;
+      border: 2px solid #ff7f32;
+      border-radius: 10px;
+      position: relative;
+    }
+    .contact-section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #ff7f32;
+      font-weight: bold;
+    }
+    .contact-section p {
+      font-size: 20px;
+      margin: 10px 0;
+      color: #333;
+    }
+    .contact-section p a {
+      color: #ff7f32;
+      text-decoration: underline;
+    }
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    .contact-buttons a {
+      display: flex;
+      align-items: center;
+      background-color: #6ca0dc;
+      color: white;
+      padding: 12px 24px;
       border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 600;
+      box-shadow: 0 3px 6px rgba(108, 160, 220, 0.4);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      min-width: 250px;
+      cursor: pointer;
+      user-select: none;
     }
-    .contact button:hover {
-      background-color: #e65c00;
+    .contact-buttons a:hover {
+      background-color: #517cc1;
+      box-shadow: 0 5px 10px rgba(81, 124, 193, 0.6);
+      color: #eee;
     }
-    .map {
-      margin-top: 20px;
+    .contact-buttons img {
+      width: 28px;
+      height: 28px;
+      margin-right: 12px;
+      filter: brightness(90%) contrast(100%);
+      transition: filter 0.3s ease;
+      pointer-events: none;
+    }
+    .contact-buttons a:hover img {
+      filter: brightness(110%) contrast(110%);
+    }
+    /* Copiado feedback */
+    #copy-feedback {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #517cc1;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 16px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      user-select: none;
+      z-index: 9999;
+    }
+    #copy-feedback.show {
+      opacity: 1;
+      pointer-events: auto;
     }
     footer {
+      background-color: #333;
+      color: white;
       text-align: center;
-      margin-top: 40px;
       padding: 20px;
-      background-color: #222;
-      color: #fff;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #ff7f32;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      header {
+        padding: 10px;
+      }
     }
   </style>
-  <script>
-    function copiarTelefono() {
-      navigator.clipboard.writeText("972503067").then(() => {
-        alert("Teléfono copiado: 972 50 30 67");
-      });
-    }
-  </script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AutoRepair",
-      "name": "XTmotor",
-      "image": "https://github.com/xtmotor/xtmotor.github.io/blob/main/logo_transparent.webp?raw=true",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Calle Torres i Bages, 26",
-        "addressLocality": "Figueres",
-        "addressRegion": "Girona",
-        "postalCode": "17600",
-        "addressCountry": "ES"
-      },
-      "telephone": "+34972503067",
-      "email": "xtmotor@hotmail.es",
-      "url": "https://www.xtmotor.es",
-      "openingHours": "Mo-Fr 09:00-13:00,15:00-19:00",
-      "priceRange": "€€"
-    }
-  </script>
 </head>
 <body>
   <header>
-    <img src="https://github.com/xtmotor/xtmotor.github.io/blob/main/logo_transparent.webp?raw=true" alt="Logotipo XTmotor" />
-    <h1>XTmotor</h1>
-    <p>Taller mecánico en Figueres</p>
+    <img
+      src="https://github.com/xtmotor/xtmotor.github.io/blob/main/logo_transparent.webp?raw=true"
+      alt="Logo XT Motor"
+      class="logo"
+      loading="lazy"
+    />
+    <nav>
+      <a id="scrollToServicios">Servicios</a>
+      <a id="scrollToContacto">Contacto</a>
+    </nav>
   </header>
 
+  <div class="header-banner">
+    <div class="header-content">
+      <h1>XTmotor</h1>
+      <p>Cuidado y mantenimiento de tu vehículo en Figueres</p>
+    </div>
+  </div>
+
   <main>
-    <section>
-      <h2>¿Qué hacemos?</h2>
-      <p>En XTmotor ofrecemos servicios de reparación y mantenimiento de coches. Con años de experiencia, somos tu taller de confianza en Figueres.</p>
-
-      <div class="services">
-        <div class="service">
-          <img src="https://cdn-icons-png.flaticon.com/512/1040/1040997.png" alt="Icono reparación de motor" />
-          <h3>Reparación de motor</h3>
-          <p>Diagnóstico y reparación profesional del motor para todas las marcas.</p>
-        </div>
-        <div class="service">
-          <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Icono cambio de neumáticos" />
-          <h3>Cambio de neumáticos</h3>
-          <p>Montaje y equilibrado de neumáticos de forma rápida y segura.</p>
-        </div>
-        <div class="service">
-          <img src="https://cdn-icons-png.flaticon.com/512/1040/1040984.png" alt="Icono aire acondicionado" />
-          <h3>Aire acondicionado</h3>
-          <p>Recarga y mantenimiento del aire acondicionado de tu vehículo.</p>
-        </div>
-        <div class="service">
-          <img src="https://cdn-icons-png.flaticon.com/512/1239/1239701.png" alt="Icono mantenimiento general" />
-          <h3>Mantenimiento general</h3>
-          <p>Revisiones periódicas, cambio de aceite, filtros y más.</p>
-        </div>
-      </div>
+    <section class="presentation-section">
+      <p>
+        Bienvenido a <span style="font-weight: 700; color: #ff7f32;">XT Motor</span>, tu taller mecánico de confianza en Figueres.
+        Ofrecemos reparación, mantenimiento y cuidado integral para tu vehículo,
+        garantizando calidad, profesionalidad y atención personalizada en cada servicio.
+      </p>
     </section>
 
-    <section class="contact">
-      <h2>Contacto</h2>
-      <p><strong>Dirección:</strong> Calle Torres i Bages, 26, 17600 Figueres (Girona)</p>
-      <p><strong>Teléfono:</strong> <a href="tel:+34972503067">972 50 30 67</a> <button onclick="copiarTelefono()" aria-label="Copiar número de teléfono">Copiar</button></p>
-      <p><strong>Email:</strong> <a href="mailto:xtmotor@hotmail.es">xtmotor@hotmail.es</a></p>
+    <h1 id="nuestros-servicios">Nuestros Servicios</h1>
+    <p style="text-align:center;">
+      Más información en
+      <a href="tel:972503067">972 503 067</a>.
+    </p>
 
-      <div class="map">
-        <iframe src="https://www.google.com/maps?q=Carrer+Torres+i+Bages,+26,+17600+Figueres,+Girona&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" title="Mapa de ubicación XTmotor"></iframe>
+    <div class="services" id="servicios">
+      <div class="service-item">
+        <h2>Reparación de Coches en Figueres</h2>
+        <p>Realizamos reparaciones de todos los tipos de vehículos, desde coches hasta furgonetas.</p>
       </div>
-    </section>
+      <div class="service-item">
+        <h2>Cambio de Neumáticos</h2>
+        <p>Cambio y reparación de neumáticos, con neumáticos de alta calidad para garantizar tu seguridad.</p>
+      </div>
+      <div class="service-item">
+        <h2>Aire Acondicionado</h2>
+        <p>Recarga de aire acondicionado y reparación de sistemas de climatización.</p>
+      </div>
+      <div class="service-item">
+        <h2>Revisión y Mantenimiento</h2>
+        <p>Revisión general del vehículo y mantenimiento preventivo para alargar la vida útil de tu coche.</p>
+      </div>
+      <div class="service-item">
+        <h2>Sistema de Frenos</h2>
+        <p>Reemplazo y revisión del sistema de frenos para garantizar tu seguridad en la carretera.</p>
+      </div>
+      <div class="service-item">
+        <h2>Escapes y Emisiones</h2>
+        <p>Reparación y sustitución de sistemas de escape, mejorando la eficiencia y reduciendo las emisiones.</p>
+      </div>
+      <div class="service-item">
+        <h2>Diagnóstico Electrónico</h2>
+        <p>Diagnóstico completo de los sistemas electrónicos del vehículo para detectar y reparar fallos rápidamente.</p>
+      </div>
+      <div class="service-item">
+        <h2>Suspensión y Confort</h2>
+        <p>Reparación de sistemas de suspensión, mejorando la estabilidad y el confort del vehículo.</p>
+      </div>
+    </div>
+
+    <div class="contact-section" id="contacto">
+      <h2>¿Problemas con tu coche?</h2>
+      <p>
+        Llámanos al
+        <a href="tel:972503067">972 503 067</a>
+        o envíanos un
+        <a href="mailto:xtmotor@hotmail.es">mail</a>
+        y te ayudaremos
+      </p>
+
+      <div class="contact-buttons">
+        <a href="tel:972503067" class="copy-btn" data-copy="972 503 067" aria-label="Llámanos al 972 503 067">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Teléfono" />
+          972 503 067
+        </a>
+        <a href="mailto:xtmotor@hotmail.es" class="copy-btn" data-copy="xtmotor@hotmail.es" aria-label="Envíanos un correo electrónico">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png" alt="Correo electrónico" />
+          xtmotor@hotmail.es
+        </a>
+        <a href="https://www.google.com/maps?q=Calle+torres+i+bages+26,+Figueres"
+           class="copy-btn" data-copy="Calle Torres i Bages, 26, Figueres"
+           aria-label="Ubicación en Google Maps"
+           id="maps-link">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/marker.png" alt="Ubicación" />
+          Calle Torres i Bages, 26, Figueres
+        </a>
+      </div>
+
+      <div id="copy-feedback">¡Copiado!</div>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 XTmotor. Todos los derechos reservados.</p>
+    <p>&copy; 2025 XT Motor. Todos los derechos reservados.</p>
+    <a href="https://xtmotor.github.io/aviso-legal.html" target="_blank" rel="noopener noreferrer">Aviso Legal y Privacidad</a>.
   </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.copy-btn');
+    const feedback = document.getElementById('copy-feedback');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', async e => {
+        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        const text = btn.getAttribute('data-copy');
+        const href = btn.getAttribute('href');
+        e.preventDefault();
+
+        try {
+          await navigator.clipboard.writeText(text);
+          feedback.classList.add('show');
+          setTimeout(() => feedback.classList.remove('show'), 1500);
+        } catch {
+          alert('Error al copiar al portapapeles');
+        }
+
+        if (href.startsWith('http') || href.startsWith('mailto') || href.startsWith('tel')) {
+          if (isMobile) {
+            window.location.href = href;
+          } else {
+            window.open(href, '_blank', 'noopener');
+          }
+        } else {
+          window.location.href = href;
+        }
+      });
+    });
+
+    const scrollToServicios = document.getElementById('scrollToServicios');
+    const scrollToContacto = document.getElementById('scrollToContacto');
+    const serviciosSection = document.getElementById('servicios');
+    const contactoSection = document.getElementById('contacto');
+
+    scrollToServicios.addEventListener('click', (event) => {
+      event.preventDefault();
+      serviciosSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    scrollToContacto.addEventListener('click', (event) => {
+      event.preventDefault();
+      contactoSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  </script>
 </body>
 </html>
