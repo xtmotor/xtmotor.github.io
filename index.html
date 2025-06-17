@@ -3,35 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>XT Motor - Taller Mecánico en Figueres | Reparación y Mantenimiento de Coches</title>
+  <title>XT Motor - Taller Mecánico en Figueres | Reparación de Coches</title>
 
-  <meta name="description" content="XT Motor es tu taller mecánico de confianza en Figueres. Ofrecemos reparación de coches, cambio de neumáticos, mantenimiento y más." />
-  <meta name="keywords" content="taller mecánico Figueres, reparación de coches, mantenimiento de vehículos, cambio neumáticos, XT Motor" />
-  <meta name="author" content="XT Motor" />
-  <meta name="robots" content="index, follow" />
+  <meta name="description" content="XT Motor es tu taller mecánico de confianza en Figueres. Ofrecemos reparación de coches, mantenimiento, cambio de neumáticos y más. Calidad y profesionalidad garantizadas.">
+  <meta name="keywords" content="taller mecánico Figueres, reparación coches Figueres, cambio neumáticos Figueres, mantenimiento coche Figueres, XT Motor, taller en Figueres">
+  <meta name="author" content="XT Motor">
+  <meta name="robots" content="index, follow">
 
-  <link rel="canonical" href="https://www.xtmotor.es/" />
+  <meta property="og:title" content="XT Motor - Taller Mecánico en Figueres">
+  <meta property="og:description" content="Reparación, mantenimiento y cuidado de tu coche en Figueres. Taller mecánico profesional y de confianza.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.xtmotor.es/">
+  <meta property="og:image" content="https://github.com/xtmotor/xtmotor.github.io/blob/main/logo_transparent.webp?raw=true">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="XT Motor - Taller Mecánico en Figueres">
+  <meta name="twitter:description" content="Reparación, mantenimiento y más en Figueres. Confía en XT Motor.">
+  <meta name="twitter:image" content="https://github.com/xtmotor/xtmotor.github.io/blob/main/logo_transparent.webp?raw=true">
+
+  <link rel="canonical" href="https://www.xtmotor.es/">
   <link rel="icon" href="https://raw.githubusercontent.com/xtmotor/xtmotor.github.io/refs/heads/main/logo_pesta%C3%B1a.ico" type="image/x-icon" />
 
-  <!-- Datos estructurados para SEO local -->
+  <!-- Datos estructurados JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
     "name": "XT Motor",
     "image": "https://github.com/xtmotor/xtmotor.github.io/blob/main/logo_transparent.webp?raw=true",
+    "url": "https://www.xtmotor.es/",
+    "telephone": "+34972503067",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Calle Torres i Bages, 26",
       "addressLocality": "Figueres",
-      "addressRegion": "Cataluña",
+      "addressRegion": "Girona",
       "postalCode": "17600",
       "addressCountry": "ES"
     },
-    "telephone": "+34 972503067",
-    "url": "https://www.xtmotor.es/",
-    "openingHours": "Mo-Fr 09:00-13:00 15:00-19:00",
-    "description": "Taller mecánico en Figueres especializado en reparación de coches, cambio de neumáticos, aire acondicionado y diagnóstico electrónico.",
+    "openingHours": "Mo-Fr 09:00-13:00,15:00-19:00",
+    "description": "Taller mecánico en Figueres especializado en reparación de coches, cambio de neumáticos, aire acondicionado, frenos y más.",
     "priceRange": "€€"
   }
   </script>
@@ -73,7 +84,6 @@
     header nav a:hover {
       color: #ff7f32;
     }
-    /* Banner */
     .header-banner {
       position: relative;
       background-image: url('https://github.com/xtmotor/xtmotor.github.io/blob/main/fachada.webp?raw=true');
@@ -100,7 +110,6 @@
       font-size: 24px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
     }
-    /* Main */
     main {
       padding: 40px 20px;
       background-color: #f4f4f4;
@@ -117,7 +126,6 @@
       padding-left: 20px;
       font-family: Arial, sans-serif;
     }
-    /* Titles */
     h1,
     h2 {
       text-align: center;
@@ -129,7 +137,6 @@
     h2 {
       font-size: 36px;
     }
-    /* Services */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -153,7 +160,6 @@
       transform: scale(1.05);
       box-shadow: 0 0 20px rgba(255, 127, 50, 0.8);
     }
-    /* Contact */
     .contact-section {
       background-color: white;
       padding: 50px 20px;
@@ -217,7 +223,6 @@
     .contact-buttons a:hover img {
       filter: brightness(110%) contrast(110%);
     }
-    /* Copiado feedback */
     #copy-feedback {
       position: absolute;
       top: 10px;
@@ -262,9 +267,9 @@
       src="https://github.com/xtmotor/xtmotor.github.io/blob/main/logo_transparent.webp?raw=true"
       alt="Logo XT Motor"
       class="logo"
-      loading="lazy"
     />
     <nav>
+      <!-- Cambié el href por un id para controlarlo con JS -->
       <a id="scrollToServicios">Servicios</a>
       <a id="scrollToContacto">Contacto</a>
     </nav>
@@ -289,41 +294,62 @@
     <h1 id="nuestros-servicios">Nuestros Servicios</h1>
     <p style="text-align:center;">
       Más información en
-      <a href="tel:972503067">972 503 067</a>.
+      <a href="tel:972503067">972 503 067</a>.
     </p>
 
     <div class="services" id="servicios">
       <div class="service-item">
-        <h2>Reparación de Coches en Figueres</h2>
-        <p>Realizamos reparaciones de todos los tipos de vehículos, desde coches hasta furgonetas.</p>
+        <h3>Reparación de Coches</h3>
+        <p>
+          Realizamos reparaciones de todos los tipos de vehículos, desde coches
+          hasta furgonetas.
+        </p>
       </div>
       <div class="service-item">
-        <h2>Cambio de Neumáticos</h2>
-        <p>Cambio y reparación de neumáticos, con neumáticos de alta calidad para garantizar tu seguridad.</p>
+        <h3>Cambio de Neumáticos</h3>
+        <p>
+          Cambio y reparación de neumáticos, con neumáticos de alta calidad para
+          garantizar tu seguridad.
+        </p>
       </div>
       <div class="service-item">
-        <h2>Aire Acondicionado</h2>
+        <h3>Aire Acondicionado</h3>
         <p>Recarga de aire acondicionado y reparación de sistemas de climatización.</p>
       </div>
       <div class="service-item">
-        <h2>Revisión y Mantenimiento</h2>
-        <p>Revisión general del vehículo y mantenimiento preventivo para alargar la vida útil de tu coche.</p>
+        <h3>Revisión y Mantenimiento</h3>
+        <p>
+          Revisión general del vehículo y mantenimiento preventivo para alargar la
+          vida útil de tu coche.
+        </p>
       </div>
       <div class="service-item">
-        <h2>Sistema de Frenos</h2>
-        <p>Reemplazo y revisión del sistema de frenos para garantizar tu seguridad en la carretera.</p>
+        <h3>Frenos</h3>
+        <p>
+          Reemplazo y revisión del sistema de frenos para garantizar tu seguridad
+          en la carretera.
+        </p>
       </div>
       <div class="service-item">
-        <h2>Escapes y Emisiones</h2>
-        <p>Reparación y sustitución de sistemas de escape, mejorando la eficiencia y reduciendo las emisiones.</p>
+        <h3>Escapes</h3>
+        <p>
+          Reparación y sustitución de sistemas de escape, mejorando la eficiencia
+          y reduciendo las emisiones.
+        </p>
       </div>
       <div class="service-item">
-        <h2>Diagnóstico Electrónico</h2>
-        <p>Diagnóstico completo de los sistemas electrónicos del vehículo para detectar y reparar fallos rápidamente.</p>
+        <h3>Diagnóstico Electrónico</h3>
+        <p>
+          Diagnóstico completo de los sistemas electrónicos del vehículo para
+          detectar y reparar fallos rápidamente.
+        </p>
       </div>
       <div class="service-item">
-        <h2>Suspensión y Confort</h2>
-        <p>Reparación de sistemas de suspensión, mejorando la estabilidad y el confort del vehículo.</p>
+        <h3>Suspensión</h3>
+        <p>
+          Reparación de sistemas de suspensión, mejorando la estabilidad y el
+          confort del vehículo.
+        </p>
       </div>
     </div>
 
@@ -331,7 +357,7 @@
       <h2>¿Problemas con tu coche?</h2>
       <p>
         Llámanos al
-        <a href="tel:972503067">972 503 067</a>
+        <a href="tel:972503067">972 503 067</a>
         o envíanos un
         <a href="mailto:xtmotor@hotmail.es">mail</a>
         y te ayudaremos
@@ -339,20 +365,32 @@
 
       <div class="contact-buttons">
         <a href="tel:972503067" class="copy-btn" data-copy="972 503 067" aria-label="Llámanos al 972 503 067">
-          <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Teléfono" />
-          972 503 067
+          <img
+            src="https://img.icons8.com/ios-filled/50/ffffff/phone.png"
+            alt="Teléfono"
+          />
+          972 503 067
         </a>
         <a href="mailto:xtmotor@hotmail.es" class="copy-btn" data-copy="xtmotor@hotmail.es" aria-label="Envíanos un correo electrónico">
-          <img src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png" alt="Correo electrónico" />
+          <img
+            src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png"
+            alt="Correo electrónico"
+          />
           xtmotor@hotmail.es
         </a>
-        <a href="https://www.google.com/maps?q=Calle+torres+i+bages+26,+Figueres"
-           class="copy-btn" data-copy="Calle Torres i Bages, 26, Figueres"
-           aria-label="Ubicación en Google Maps"
-           id="maps-link">
-          <img src="https://img.icons8.com/ios-filled/50/ffffff/marker.png" alt="Ubicación" />
-          Calle Torres i Bages, 26, Figueres
-        </a>
+        <a
+        href="https://www.google.com/maps?q=Calle+torres+i+bages+26,+Figueres"
+        class="copy-btn"
+        data-copy="Calle Torres i Bages, 26, Figueres"
+        aria-label="Ubicación en Google Maps"
+        id="maps-link"
+       >
+      <img
+        src="https://img.icons8.com/ios-filled/50/ffffff/marker.png"
+        alt="Ubicación"
+      />
+      Calle Torres i Bages, 26, Figueres
+      </a>
       </div>
 
       <div id="copy-feedback">¡Copiado!</div>
@@ -370,11 +408,12 @@
 
     buttons.forEach(btn => {
       btn.addEventListener('click', async e => {
+        // Verifica si el dispositivo es móvil
         const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
         const text = btn.getAttribute('data-copy');
         const href = btn.getAttribute('href');
-        e.preventDefault();
 
+        e.preventDefault(); // siempre evitamos el comportamiento por defecto
         try {
           await navigator.clipboard.writeText(text);
           feedback.classList.add('show');
@@ -383,10 +422,13 @@
           alert('Error al copiar al portapapeles');
         }
 
+        // Si es enlace externo (maps o correo)
         if (href.startsWith('http') || href.startsWith('mailto') || href.startsWith('tel')) {
+          // Si es móvil, redirige en la misma pestaña
           if (isMobile) {
             window.location.href = href;
           } else {
+            // En escritorio, abre en nueva pestaña
             window.open(href, '_blank', 'noopener');
           }
         } else {
@@ -395,18 +437,23 @@
       });
     });
 
+    // Selecciona el enlace y las secciones de servicios y contacto
     const scrollToServicios = document.getElementById('scrollToServicios');
     const scrollToContacto = document.getElementById('scrollToContacto');
     const serviciosSection = document.getElementById('servicios');
     const contactoSection = document.getElementById('contacto');
 
+    // Añadir evento de clic para Servicios
     scrollToServicios.addEventListener('click', (event) => {
-      event.preventDefault();
+      event.preventDefault();  // Evitar el cambio en la URL
+      // Desplazarse a la sección de servicios
       serviciosSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 
+    // Añadir evento de clic para Contacto
     scrollToContacto.addEventListener('click', (event) => {
-      event.preventDefault();
+      event.preventDefault();  // Evitar el cambio en la URL
+      // Desplazarse a la sección de contacto
       contactoSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   </script>
