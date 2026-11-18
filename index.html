@@ -138,9 +138,9 @@ p { margin: 0 0 1rem; }
 .hero h1 { font-size: clamp(2.4rem, 5vw, 4.1rem); color: #fff; text-wrap: balance; }
 .hero .sub { color: var(--gris-clar); font-size: 1.1875rem; max-width: 36ch; margin: 20px 0 0; }
 .accions { display: flex; flex-direction: column; gap: 12px; }
-.estat { display: flex; align-items: center; gap: 10px; margin: 0 0 6px; font-weight: 600; min-height: 1.55em; }
+.estat { display: flex; align-items: flex-start; gap: 10px; margin: 0 0 6px; font-weight: 600; min-height: 1.55em; }
 .estat:empty { display: none; }
-.estat::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--gris-clar); flex: none; }
+.estat::before { content: ""; width: 10px; height: 10px; margin-top: .45em; border-radius: 50%; background: var(--gris-clar); flex: none; }
 .estat.obert::before { background: var(--verd); box-shadow: 0 0 0 4px rgba(92,199,126,.22); }
 
 /* Seccions */
@@ -473,7 +473,8 @@ p { margin: 0 0 1rem; }
 
   function minuts(hhmm) { var p = hhmm.split(':'); return +p[0] * 60 + +p[1]; }
   /* 480 -> "8 h"; 810 -> "13.30 h" (català) o "13:30 h" (castellà) */
-  function hora(m, l) { var h = Math.floor(m / 60), mi = m % 60; return (mi ? h + (l === 'ca' ? '.' : ':') + ('0' + mi).slice(-2) : h) + ' h'; }
+  function num(m, l) { var h = Math.floor(m / 60), mi = m % 60; return mi ? h + (l === 'ca' ? '.' : ':') + ('0' + mi).slice(-2) : String(h); }
+  function hora(m, l) { return num(m, l) + '\u00a0h'; }
   function dosXifres(n) { return ('0' + n).slice(-2); }
 
   /* Data i hora actuals a Figueres, sigui on sigui el visitant */
@@ -505,15 +506,14 @@ p { margin: 0 0 1rem; }
     }
     for (var d = 0; d < 21; d++) {
       var dia = infoDia(ara.any, ara.mes, ara.dia, d);
-      for (var j = 0; j < dia.franges.length; j++) {
-        var obre = dia.franges[j][0];
-        if (d === 0 && obre <= ara.min) continue;
-        var t = hora(obre, l);
-        if (l === 'ca') {
-          return { obert: false, text: d === 0 ? 'Obrim a les ' + t : d === 1 ? 'Obrim demà a les ' + t : 'Obrim ' + DIES.ca[dia.setmana] + ' a les ' + t };
-        }
-        return { obert: false, text: d === 0 ? 'Abrimos a las ' + t : d === 1 ? 'Abrimos mañana a las ' + t : 'Abrimos el ' + DIES.es[dia.setmana] + ' a las ' + t };
+      /* Franges que queden aquell dia, p. ex. "de 8 a 13 h i de 15 a 19 h" */
+      var queden = dia.franges.filter(function (f) { return d > 0 || f[0] > ara.min; });
+      if (!queden.length) continue;
+      var franges = queden.map(function (f) { return 'de\u00a0' + num(f[0], l) + '\u00a0a\u00a0' + hora(f[1], l); }).join(l === 'ca' ? ' i ' : ' y ');
+      if (l === 'ca') {
+        return { obert: false, text: (d === 0 ? 'Obrim avui ' : d === 1 ? 'Obrim demà ' : 'Obrim ' + DIES.ca[dia.setmana] + ' ') + franges };
       }
+      return { obert: false, text: (d === 0 ? 'Abrimos hoy ' : d === 1 ? 'Abrimos mañana ' : 'Abrimos el ' + DIES.es[dia.setmana] + ' ') + franges };
     }
     return { obert: false, text: '' };
   }
