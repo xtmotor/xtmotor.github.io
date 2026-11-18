@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="ca" data-lang="ca">
+<html lang="ca">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>XT Motor – Taller mecànic a Figueres | Taller mecánico en Figueres</title>
-<meta name="description" content="Taller mecànic a Figueres: mecànica general, revisions, pneumàtics, frens, aire condicionat i diagnosi electrònica. Taller mecánico en Figueres. Tel. 972 503 067.">
+<title>Taller mecànic a Figueres – XT Motor</title>
+<meta name="description" content="Taller mecànic a Figueres (Alt Empordà): mecànica general, revisions, pneumàtics, frens, aire condicionat i diagnosi electrònica. Truca al 972 503 067.">
 <link rel="canonical" href="https://xtmotor.es/">
+<link rel="alternate" hreflang="ca" href="https://xtmotor.es/">
+<link rel="alternate" hreflang="es" href="https://xtmotor.es/es/">
+<link rel="alternate" hreflang="x-default" href="https://xtmotor.es/">
 <meta name="theme-color" content="#343738">
 
 <meta property="og:type" content="website">
@@ -17,20 +20,14 @@
 <meta property="og:locale:alternate" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="logo_pesta%C3%B1a.ico">
-<link rel="apple-touch-icon" href="assets/icon-180.png">
-<link rel="preload" href="assets/fonts/archivo-black.woff" as="font" type="font/woff" crossorigin>
-<link rel="preload" href="assets/fonts/fira-sans-400.woff" as="font" type="font/woff" crossorigin>
+<link rel="icon" href="/logo_pesta%C3%B1a.ico">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="preload" href="/assets/fonts/archivo-black.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/fonts/fira-sans-400.woff" as="font" type="font/woff" crossorigin>
 
 <script>
-  /* Idioma: el que l'usuari va triar l'última vegada; si no, català si el navegador és en català, i si no, castellà. */
-  (function () {
-    var l;
-    try { l = localStorage.getItem('xt-idioma'); } catch (e) {}
-    if (l !== 'ca' && l !== 'es') l = /^ca\b/i.test(navigator.language || '') ? 'ca' : 'es';
-    document.documentElement.lang = l;
-    document.documentElement.setAttribute('data-lang', l);
-  })();
+  /* Si l'usuari havia triat el castellà, el portem a la versió en castellà. */
+  try { if (localStorage.getItem('xt-idioma') === 'es') location.replace('/es/'); } catch (e) {}
 </script>
 
 <!--
@@ -42,6 +39,7 @@
   "@context": "https://schema.org",
   "@type": "AutoRepair",
   "name": "XT Motor",
+  "alternateName": "Taller XT Motor Figueres",
   "legalName": "XT MOTOR EMPORDÀ, S.L.U.",
   "url": "https://xtmotor.es/",
   "logo": "https://xtmotor.es/assets/logo.png",
@@ -57,19 +55,21 @@
     "addressCountry": "ES"
   },
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "13:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "13:00" },
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "15:00", "closes": "19:00" }
   ],
-  "areaServed": "Figueres, Alt Empordà",
+  "geo": { "@type": "GeoCoordinates", "latitude": 42.2593918, "longitude": 2.9652192 },
+  "hasMap": "https://maps.google.com/?cid=3272802303095995742",
+  "areaServed": ["Figueres", "Alt Empordà"],
   "knowsLanguage": ["ca", "es"],
   "priceRange": "€€"
 }
 </script>
 
 <style>
-@font-face { font-family: "Archivo Black"; src: url(assets/fonts/archivo-black.woff) format("woff"); font-weight: 400; font-display: swap; }
-@font-face { font-family: "Fira Sans"; src: url(assets/fonts/fira-sans-400.woff) format("woff"); font-weight: 400; font-display: swap; }
-@font-face { font-family: "Fira Sans"; src: url(assets/fonts/fira-sans-600.woff) format("woff"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Archivo Black"; src: url(/assets/fonts/archivo-black.woff) format("woff"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Fira Sans"; src: url(/assets/fonts/fira-sans-400.woff) format("woff"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Fira Sans"; src: url(/assets/fonts/fira-sans-600.woff) format("woff"); font-weight: 600; font-display: swap; }
 
 /* Colors trets de la façana del taller */
 :root {
@@ -88,10 +88,6 @@
   --max: 1160px;
   --pad: clamp(20px, 5vw, 48px);
 }
-
-/* Mostra només l'idioma triat */
-html[data-lang="ca"] body [lang="es"]:not(.no-amagar),
-html[data-lang="es"] body [lang="ca"]:not(.no-amagar) { display: none !important; }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -128,17 +124,18 @@ p { margin: 0 0 1rem; }
 .menu a { color: var(--grafit-fosc); font-weight: 600; text-decoration: none; padding: 6px 0; }
 .menu a:hover { color: var(--taronja-text); }
 .idioma { display: flex; border: 1px solid var(--linia); border-radius: 6px; overflow: hidden; flex: none; }
-.idioma button { font: inherit; font-size: .875rem; padding: 7px 11px; border: 0; background: #fff; color: var(--gris); cursor: pointer; }
-.idioma button + button { border-left: 1px solid var(--linia); }
-.idioma button[aria-pressed="true"] { background: var(--grafit); color: #fff; }
+.idioma a { display: block; font-size: .875rem; padding: 7px 11px; background: #fff; color: var(--gris); text-decoration: none; }
+.idioma a:hover { color: var(--grafit-fosc); }
+.idioma a + a { border-left: 1px solid var(--linia); }
+.idioma a[aria-current="page"] { background: var(--grafit); color: #fff; }
 .cap-tel { min-height: 44px; padding: 10px 16px; }
 
 /* Portada: foto de la façana + sòcol gris amb la franja taronja */
 .foto-hero { background: var(--grafit); }
 .foto-hero img { width: 100%; height: clamp(320px, 58vh, 600px); object-fit: cover; object-position: 50% 30%; }
 .socol { background: linear-gradient(var(--grafit) 0 22px, var(--taronja) 22px 32px, var(--grafit) 32px); color: #fff; }
-.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 40px; align-items: end; padding-top: 68px; padding-bottom: 60px; }
-.hero h1 { font-size: clamp(2.4rem, 5.4vw, 4.4rem); color: #fff; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 40px; align-items: end; padding-top: 68px; padding-bottom: 60px; }
+.hero h1 { font-size: clamp(2.4rem, 5vw, 4.1rem); color: #fff; text-wrap: balance; }
 .hero .sub { color: var(--gris-clar); font-size: 1.1875rem; max-width: 36ch; margin: 20px 0 0; }
 .accions { display: flex; flex-direction: column; gap: 12px; }
 .estat { display: flex; align-items: center; gap: 10px; margin: 0 0 6px; font-weight: 600; min-height: 1.55em; }
@@ -224,21 +221,21 @@ p { margin: 0 0 1rem; }
 </head>
 <body>
 
-<a class="salta" href="#contingut"><span lang="ca">Salta al contingut</span><span lang="es">Saltar al contenido</span></a>
+<a class="salta" href="#contingut">Salta al contingut</a>
 
 <header class="cap">
   <div class="wrap">
-    <a class="logo" href="./"><img src="assets/logo.png" width="320" height="270" alt="XT Motor"></a>
+    <a class="logo" href="/"><img src="/assets/logo.png" width="320" height="270" alt="XT Motor"></a>
     <nav class="menu" aria-label="Menú">
-      <a href="#serveis"><span lang="ca">Serveis</span><span lang="es">Servicios</span></a>
-      <a href="#horari"><span lang="ca">Horari</span><span lang="es">Horario</span></a>
-      <a href="#on-som"><span lang="ca">On som</span><span lang="es">Dónde estamos</span></a>
-      <a href="#contacte"><span lang="ca">Contacte</span><span lang="es">Contacto</span></a>
+      <a href="#serveis">Serveis</a>
+      <a href="#horari">Horari</a>
+      <a href="#on-som">On som</a>
+      <a href="#contacte">Contacte</a>
     </nav>
-    <div class="idioma" role="group" aria-label="Idioma">
-      <button type="button" class="no-amagar" lang="ca" data-idioma="ca" aria-pressed="true">Català</button>
-      <button type="button" class="no-amagar" lang="es" data-idioma="es" aria-pressed="false">Castellano</button>
-    </div>
+    <nav class="idioma" aria-label="Idioma">
+      <a href="/" hreflang="ca" lang="ca" data-idioma="ca" aria-current="page">Català</a>
+      <a href="/es/" hreflang="es" lang="es" data-idioma="es">Castellano</a>
+    </nav>
     <a class="btn btn-taronja cap-tel" href="tel:+34972503067">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
       972 503 067
@@ -251,31 +248,28 @@ p { margin: 0 0 1rem; }
   <section class="hero" aria-labelledby="titol">
     <div class="foto-hero">
       <picture>
-        <source type="image/webp" srcset="assets/fachada-800.webp 800w, fachada.webp 1280w" sizes="100vw">
-        <img src="fachada.jpg" width="1280" height="960" fetchpriority="high"
-             alt="Façana del taller XT Motor a Figueres, amb la porta oberta"
-             data-alt-ca="Façana del taller XT Motor a Figueres, amb la porta oberta"
-             data-alt-es="Fachada del taller XT Motor en Figueres, con la puerta abierta">
+        <source type="image/webp" srcset="/assets/fachada-800.webp 800w, /fachada.webp 1280w" sizes="100vw">
+        <img src="/fachada.jpg" width="1280" height="960" fetchpriority="high"
+             alt="Façana del taller XT Motor a Figueres, amb la porta oberta">
       </picture>
     </div>
     <div class="socol">
       <div class="wrap">
         <div>
-          <h1 id="titol"><span lang="ca">Taller mecànic a Figueres</span><span lang="es">Taller mecánico en Figueres</span></h1>
+          <h1 id="titol">Taller mecànic a Figueres</h1>
           <p class="sub">
-            <span lang="ca">Reparació i manteniment de cotxes i furgonetes, amb atenció personalitzada.</span>
-            <span lang="es">Reparación y mantenimiento de coches y furgonetas, con atención personalizada.</span>
+            Reparació i manteniment de cotxes i furgonetes, amb atenció personalitzada.
           </p>
         </div>
         <div class="accions" id="accions">
           <p class="estat" id="estat" aria-live="polite"></p>
           <a class="btn btn-taronja" href="tel:+34972503067">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
-            <span lang="ca">Truca al 972 503 067</span><span lang="es">Llama al 972 503 067</span>
+            Truca al 972 503 067
           </a>
-          <a class="btn btn-linia" href="https://www.google.com/maps/search/?api=1&amp;query=XT%20Motor%2C%20Carrer%20Torras%20i%20Bages%2026%2C%2017600%20Figueres" target="_blank" rel="noopener">
+          <a class="btn btn-linia" href="https://maps.google.com/?cid=3272802303095995742" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span lang="ca">Com arribar</span><span lang="es">Cómo llegar</span>
+            Com arribar
           </a>
         </div>
       </div>
@@ -285,15 +279,13 @@ p { margin: 0 0 1rem; }
   <section class="seccio serveis" id="serveis" aria-labelledby="titol-serveis">
     <div class="wrap">
       <div class="intro">
-        <h2 id="titol-serveis"><span lang="ca">Què fem</span><span lang="es">Qué hacemos</span></h2>
+        <h2 id="titol-serveis">Què fem</h2>
         <p>
-          <span lang="ca">Fem el manteniment i les reparacions habituals de cotxes i furgonetes, des d'una revisió fins a una avaria complicada.</span>
-          <span lang="es">Hacemos el mantenimiento y las reparaciones habituales de coches y furgonetas, desde una revisión hasta una avería complicada.</span>
+          Fem el manteniment i les reparacions habituals de cotxes i furgonetes, des d'una revisió fins a una avaria complicada.
         </p>
         <div class="nota">
           <p>
-            <span lang="ca">No saps què li passa al cotxe? Truca'ns i t'orientem:</span>
-            <span lang="es">¿No sabes qué le pasa al coche? Llámanos y te orientamos:</span>
+            No saps què li passa al cotxe? Truca'ns i t'orientem:
             <a href="tel:+34972503067">972 503 067</a>
           </p>
         </div>
@@ -303,57 +295,57 @@ p { margin: 0 0 1rem; }
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 5.5a4.5 4.5 0 0 0-5.8 5.8L3.5 16.5a2.1 2.1 0 0 0 3 3l5.2-5.2a4.5 4.5 0 0 0 5.8-5.8l-2.6 2.6-2.3-.7-.7-2.3z"/></svg>
           <div>
-            <h3><span lang="ca">Mecànica general</span><span lang="es">Mecánica general</span></h3>
-            <p><span lang="ca">Reparacions de tota mena en cotxes i furgonetes.</span><span lang="es">Reparaciones de todo tipo en coches y furgonetas.</span></p>
+            <h3>Mecànica general</h3>
+            <p>Reparacions de tota mena en cotxes i furgonetes.</p>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 2.5h6v3H9z"/><path d="M9 13l2.2 2.2L15.5 11"/></svg>
           <div>
-            <h3><span lang="ca">Revisió i manteniment</span><span lang="es">Revisión y mantenimiento</span></h3>
-            <p><span lang="ca">Canvi d'oli i filtres i revisions periòdiques perquè el cotxe duri més.</span><span lang="es">Cambio de aceite y filtros y revisiones periódicas para alargar la vida del coche.</span></p>
+            <h3>Revisió i manteniment</h3>
+            <p>Canvi d'oli i filtres i revisions periòdiques perquè el cotxe duri més.</p>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v2.5M12 18.5V21M3 12h2.5M18.5 12H21M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M5.6 18.4l1.8-1.8M16.6 7.4l1.8-1.8"/></svg>
           <div>
-            <h3><span lang="ca">Pneumàtics</span><span lang="es">Neumáticos</span></h3>
-            <p><span lang="ca">Canvi i reparació de pneumàtics de qualitat.</span><span lang="es">Cambio y reparación de neumáticos de calidad.</span></p>
+            <h3>Pneumàtics</h3>
+            <p>Canvi i reparació de pneumàtics de qualitat.</p>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="13" r="7.5"/><circle cx="11" cy="13" r="2"/><circle cx="14.2" cy="16.2" r=".6"/><circle cx="7.8" cy="16.2" r=".6"/><circle cx="7.8" cy="9.8" r=".6"/><circle cx="14.2" cy="9.8" r=".6"/><path d="M14.25 4.07A9.5 9.5 0 0 1 19.6 8.98L16.44 10.46A6 6 0 0 0 13.05 7.36z"/></svg>
           <div>
-            <h3><span lang="ca">Frens</span><span lang="es">Frenos</span></h3>
-            <p><span lang="ca">Revisió i substitució de pastilles, discos i líquid de frens.</span><span lang="es">Revisión y sustitución de pastillas, discos y líquido de frenos.</span></p>
+            <h3>Frens</h3>
+            <p>Revisió i substitució de pastilles, discos i líquid de frens.</p>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g id="brac"><path d="M12 12V2.5M9.6 4.6 12 7l2.4-2.4"/></g><use href="#brac" transform="rotate(60 12 12)"/><use href="#brac" transform="rotate(120 12 12)"/><use href="#brac" transform="rotate(180 12 12)"/><use href="#brac" transform="rotate(240 12 12)"/><use href="#brac" transform="rotate(300 12 12)"/></svg>
           <div>
-            <h3><span lang="ca">Aire condicionat</span><span lang="es">Aire acondicionado</span></h3>
-            <p><span lang="ca">Càrrega del gas i reparació de la climatització.</span><span lang="es">Carga del gas y reparación de la climatización.</span></p>
+            <h3>Aire condicionat</h3>
+            <p>Càrrega del gas i reparació de la climatització.</p>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16.5V20"/><path d="M6 11h3l1.5-3 2.5 6 1.5-3H18"/></svg>
           <div>
-            <h3><span lang="ca">Diagnosi electrònica</span><span lang="es">Diagnóstico electrónico</span></h3>
-            <p><span lang="ca">Llegim les avaries de la centraleta i trobem l'origen del problema.</span><span lang="es">Leemos las averías de la centralita y encontramos el origen del problema.</span></p>
+            <h3>Diagnosi electrònica</h3>
+            <p>Llegim les avaries de la centraleta i trobem l'origen del problema.</p>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.5h10M7 20.5h10"/><path d="M12 3.5 8 6l8 2.5L8 11l8 2.5L8 16l8 2.5-4 2"/></svg>
           <div>
-            <h3><span lang="ca">Suspensió</span><span lang="es">Suspensión</span></h3>
-            <p><span lang="ca">Amortidors, molles i silentblocs, per anar còmode i segur.</span><span lang="es">Amortiguadores, muelles y silentblocks, para ir cómodo y seguro.</span></p>
+            <h3>Suspensió</h3>
+            <p>Amortidors, molles i silentblocs, per anar còmode i segur.</p>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 14.5H6M15 14.5h3"/><rect x="6" y="11" width="9" height="7" rx="3.5"/><circle cx="20.3" cy="12" r="1.3"/><circle cx="18.8" cy="8.3" r="1"/></svg>
           <div>
-            <h3><span lang="ca">Tub d'escapament</span><span lang="es">Escape</span></h3>
-            <p><span lang="ca">Reparació i substitució de l'escapament.</span><span lang="es">Reparación y sustitución del escape.</span></p>
+            <h3>Tub d'escapament</h3>
+            <p>Reparació i substitució de l'escapament.</p>
           </div>
         </li>
       </ul>
@@ -362,19 +354,19 @@ p { margin: 0 0 1rem; }
 
   <section class="seccio proces" aria-labelledby="titol-proces">
     <div class="wrap">
-      <h2 id="titol-proces"><span lang="ca">Com treballem</span><span lang="es">Cómo trabajamos</span></h2>
+      <h2 id="titol-proces">Com treballem</h2>
       <ol class="passos">
         <li>
-          <h3><span lang="ca">Truca o passa pel taller</span><span lang="es">Llama o pásate por el taller</span></h3>
-          <p><span lang="ca">Explica'ns què notes al cotxe i quedem un dia per portar-lo.</span><span lang="es">Cuéntanos qué notas en el coche y quedamos un día para traerlo.</span></p>
+          <h3>Truca o passa pel taller</h3>
+          <p>Explica'ns què notes al cotxe i quedem un dia per portar-lo.</p>
         </li>
         <li>
-          <h3><span lang="ca">El revisem i t'ho expliquem</span><span lang="es">Lo revisamos y te lo explicamos</span></h3>
-          <p><span lang="ca">Mirem què té i et diem què cal fer i quant costarà abans de començar.</span><span lang="es">Miramos qué tiene y te decimos qué hay que hacer y cuánto costará antes de empezar.</span></p>
+          <h3>El revisem i t'ho expliquem</h3>
+          <p>Mirem què té i et diem què cal fer i quant costarà abans de començar.</p>
         </li>
         <li>
-          <h3><span lang="ca">El reparem i t'avisem</span><span lang="es">Lo reparamos y te avisamos</span></h3>
-          <p><span lang="ca">Quan el cotxe està a punt, et truquem perquè el vinguis a buscar.</span><span lang="es">Cuando el coche está listo, te llamamos para que vengas a recogerlo.</span></p>
+          <h3>El reparem i t'avisem</h3>
+          <p>Quan el cotxe està a punt, et truquem perquè el vinguis a buscar.</p>
         </li>
       </ol>
     </div>
@@ -383,39 +375,36 @@ p { margin: 0 0 1rem; }
   <section class="seccio lloc" aria-label="Horari i adreça">
     <div class="wrap">
       <div id="horari">
-        <h2><span lang="ca">Horari</span><span lang="es">Horario</span></h2>
+        <h2>Horari</h2>
         <!-- HORARI (2 de 3) -->
         <table class="horari">
           <tr data-dies="1,2,3,4,5">
-            <th scope="row"><span lang="ca">De dilluns a divendres</span><span lang="es">De lunes a viernes</span></th>
-            <td>9:00 – 13:00<br>15:00 – 19:00</td>
+            <th scope="row">De dilluns a divendres</th>
+            <td>8:00 – 13:00<br>15:00 – 19:00</td>
           </tr>
           <tr data-dies="6,0">
-            <th scope="row"><span lang="ca">Dissabte i diumenge</span><span lang="es">Sábado y domingo</span></th>
-            <td><span lang="ca">Tancat</span><span lang="es">Cerrado</span></td>
+            <th scope="row">Dissabte i diumenge</th>
+            <td>Tancat</td>
           </tr>
         </table>
-        <p class="peu-taula"><span lang="ca">Els festius estem tancats.</span><span lang="es">Los festivos estamos cerrados.</span></p>
+        <p class="peu-taula">Els festius estem tancats.</p>
       </div>
 
       <div id="on-som">
-        <h2><span lang="ca">On som</span><span lang="es">Dónde estamos</span></h2>
+        <h2>On som</h2>
         <address class="adreca">C/ Torras i Bages, 26<br>17600 Figueres (Girona)</address>
         <p class="pista">
-          <span lang="ca">Busca la façana grisa amb la franja taronja i el rètol XTMOTOR.</span>
-          <span lang="es">Busca la fachada gris con la franja naranja y el rótulo XTMOTOR.</span>
+          Som a Figueres, a l'Alt Empordà. Busca la façana grisa amb la franja taronja i el rètol XTMOTOR.
         </p>
-        <a class="btn btn-fosc" href="https://www.google.com/maps/search/?api=1&amp;query=XT%20Motor%2C%20Carrer%20Torras%20i%20Bages%2026%2C%2017600%20Figueres" target="_blank" rel="noopener">
+        <a class="btn btn-fosc" href="https://maps.google.com/?cid=3272802303095995742" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span lang="ca">Com arribar</span><span lang="es">Cómo llegar</span>
+          Com arribar
         </a>
         <div class="porta">
           <picture>
-            <source type="image/webp" srcset="assets/porta-800.webp 800w, assets/porta-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 540px">
-            <img src="fachada2.jpg" width="1280" height="960" loading="lazy"
-                 alt="Entrada del taller XT Motor al carrer Torras i Bages"
-                 data-alt-ca="Entrada del taller XT Motor al carrer Torras i Bages"
-                 data-alt-es="Entrada del taller XT Motor en la calle Torras i Bages">
+            <source type="image/webp" srcset="/assets/porta-800.webp 800w, assets/porta-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 540px">
+            <img src="/fachada2.jpg" width="1280" height="960" loading="lazy"
+                 alt="Entrada del taller XT Motor al carrer Torras i Bages">
           </picture>
         </div>
       </div>
@@ -424,11 +413,11 @@ p { margin: 0 0 1rem; }
 
   <section class="contacte socol" id="contacte" aria-labelledby="titol-contacte">
     <div class="wrap">
-      <h2 id="titol-contacte"><span lang="ca">Problemes amb el cotxe?</span><span lang="es">¿Problemas con el coche?</span></h2>
-      <p><span lang="ca">Truca'ns i t'ajudem.</span><span lang="es">Llámanos y te ayudamos.</span></p>
+      <h2 id="titol-contacte">Problemes amb el cotxe?</h2>
+      <p>Truca'ns i t'ajudem.</p>
       <a class="tel-gran" href="tel:+34972503067">972 503 067</a>
       <p>
-        <span lang="ca">També ens pots escriure a</span><span lang="es">También puedes escribirnos a</span>
+        També ens pots escriure a
         <a class="correu" href="mailto:xtmotor@hotmail.es">xtmotor@hotmail.es</a>
       </p>
     </div>
@@ -440,9 +429,9 @@ p { margin: 0 0 1rem; }
   <div class="wrap">
     <p>© <span id="any">2026</span> XT MOTOR EMPORDÀ, S.L.U. — C/ Torras i Bages, 26, 17600 Figueres</p>
     <nav aria-label="Textos legals">
-      <a href="aviso-legal.html#aviso-legal"><span lang="ca">Avís legal</span><span lang="es">Aviso legal</span></a>
-      <a href="aviso-legal.html#privacidad"><span lang="ca">Privacitat</span><span lang="es">Privacidad</span></a>
-      <a href="aviso-legal.html#cookies">Cookies</a>
+      <a href="/aviso-legal.html#aviso-legal">Avís legal</a>
+      <a href="/aviso-legal.html#privacidad">Privacitat</a>
+      <a href="/aviso-legal.html#cookies">Cookies</a>
     </nav>
   </div>
 </footer>
@@ -450,11 +439,11 @@ p { margin: 0 0 1rem; }
 <div class="barra" id="barra">
   <a class="btn btn-taronja" href="tel:+34972503067">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
-    <span lang="ca">Truca</span><span lang="es">Llama</span>
+    Truca
   </a>
-  <a class="btn btn-fosc" href="https://www.google.com/maps/search/?api=1&amp;query=XT%20Motor%2C%20Carrer%20Torras%20i%20Bages%2026%2C%2017600%20Figueres" target="_blank" rel="noopener">
+  <a class="btn btn-fosc" href="https://maps.google.com/?cid=3272802303095995742" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-    <span lang="ca">Com arribar</span><span lang="es">Cómo llegar</span>
+    Com arribar
   </a>
 </div>
 
@@ -464,11 +453,11 @@ p { margin: 0 0 1rem; }
      HORARI (3 de 3): per a cada dia (0 = diumenge, 1 = dilluns ... 6 = dissabte),
      les franges obertes en format "HH:MM-HH:MM". */
   var HORARI = {
-    1: ['09:00-13:00', '15:00-19:00'],
-    2: ['09:00-13:00', '15:00-19:00'],
-    3: ['09:00-13:00', '15:00-19:00'],
-    4: ['09:00-13:00', '15:00-19:00'],
-    5: ['09:00-13:00', '15:00-19:00']
+    1: ['08:00-13:00', '15:00-19:00'],
+    2: ['08:00-13:00', '15:00-19:00'],
+    3: ['08:00-13:00', '15:00-19:00'],
+    4: ['08:00-13:00', '15:00-19:00'],
+    5: ['08:00-13:00', '15:00-19:00']
   };
   /* Festius que es repeteixen cada any (MM-DD). Reviseu-los cada gener. */
   var FESTIUS_ANUALS = ['01-01', '01-06', '05-01', '06-24', '08-15', '09-11', '10-12', '11-01', '12-06', '12-08', '12-25', '12-26'];
@@ -476,10 +465,6 @@ p { margin: 0 0 1rem; }
   var DIES_TANCATS = [];
   /* ======================== */
 
-  var TITOLS = {
-    ca: 'XT Motor – Taller mecànic a Figueres | Taller mecánico en Figueres',
-    es: 'XT Motor – Taller mecánico en Figueres | Taller mecànic a Figueres'
-  };
   var DIES = {
     ca: ['diumenge', 'dilluns', 'dimarts', 'dimecres', 'dijous', 'divendres', 'dissabte'],
     es: ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado']
@@ -487,7 +472,8 @@ p { margin: 0 0 1rem; }
   var root = document.documentElement;
 
   function minuts(hhmm) { var p = hhmm.split(':'); return +p[0] * 60 + +p[1]; }
-  function hora(m) { return Math.floor(m / 60) + ':' + ('0' + (m % 60)).slice(-2); }
+  /* 480 -> "8 h"; 810 -> "13.30 h" (català) o "13:30 h" (castellà) */
+  function hora(m, l) { var h = Math.floor(m / 60), mi = m % 60; return (mi ? h + (l === 'ca' ? '.' : ':') + ('0' + mi).slice(-2) : h) + ' h'; }
   function dosXifres(n) { return ('0' + n).slice(-2); }
 
   /* Data i hora actuals a Figueres, sigui on sigui el visitant */
@@ -514,7 +500,7 @@ p { margin: 0 0 1rem; }
     var avui = infoDia(ara.any, ara.mes, ara.dia, 0);
     for (var i = 0; i < avui.franges.length; i++) {
       if (ara.min >= avui.franges[i][0] && ara.min < avui.franges[i][1]) {
-        return { obert: true, text: l === 'ca' ? 'Obert ara, fins a les ' + hora(avui.franges[i][1]) : 'Abierto ahora, hasta las ' + hora(avui.franges[i][1]) };
+        return { obert: true, text: l === 'ca' ? 'Obert ara, fins a les ' + hora(avui.franges[i][1], l) : 'Abierto ahora, hasta las ' + hora(avui.franges[i][1], l) };
       }
     }
     for (var d = 0; d < 21; d++) {
@@ -522,18 +508,18 @@ p { margin: 0 0 1rem; }
       for (var j = 0; j < dia.franges.length; j++) {
         var obre = dia.franges[j][0];
         if (d === 0 && obre <= ara.min) continue;
-        var t = hora(obre);
+        var t = hora(obre, l);
         if (l === 'ca') {
-          return { obert: false, text: d === 0 ? 'Tancat ara, obrim a les ' + t : d === 1 ? 'Tancat, obrim demà a les ' + t : 'Tancat, obrim ' + DIES.ca[dia.setmana] + ' a les ' + t };
+          return { obert: false, text: d === 0 ? 'Obrim a les ' + t : d === 1 ? 'Obrim demà a les ' + t : 'Obrim ' + DIES.ca[dia.setmana] + ' a les ' + t };
         }
-        return { obert: false, text: d === 0 ? 'Cerrado ahora, abrimos a las ' + t : d === 1 ? 'Cerrado, abrimos mañana a las ' + t : 'Cerrado, abrimos el ' + DIES.es[dia.setmana] + ' a las ' + t };
+        return { obert: false, text: d === 0 ? 'Abrimos a las ' + t : d === 1 ? 'Abrimos mañana a las ' + t : 'Abrimos el ' + DIES.es[dia.setmana] + ' a las ' + t };
       }
     }
-    return { obert: false, text: l === 'ca' ? 'Tancat ara' : 'Cerrado ahora' };
+    return { obert: false, text: '' };
   }
 
   function pintaEstat() {
-    var l = root.getAttribute('data-lang');
+    var l = root.lang;
     var el = document.getElementById('estat');
     try {
       var e = estatActual(l);
@@ -559,26 +545,13 @@ p { margin: 0 0 1rem; }
     });
   }
 
-  function posaIdioma(l, desa) {
-    root.lang = l;
-    root.setAttribute('data-lang', l);
-    document.title = TITOLS[l];
-    if (desa) { try { localStorage.setItem('xt-idioma', l); } catch (e) {} }
-    document.querySelectorAll('[data-idioma]').forEach(function (b) {
-      b.setAttribute('aria-pressed', b.getAttribute('data-idioma') === l ? 'true' : 'false');
-    });
-    document.querySelectorAll('[data-alt-' + l + ']').forEach(function (img) {
-      img.alt = img.getAttribute('data-alt-' + l);
-    });
-    pintaEstat();
-  }
-
-  document.querySelectorAll('[data-idioma]').forEach(function (b) {
-    b.addEventListener('click', function () { posaIdioma(b.getAttribute('data-idioma'), true); });
+  /* Recorda l'idioma triat al selector */
+  document.querySelectorAll('[data-idioma]').forEach(function (a) {
+    a.addEventListener('click', function () { try { localStorage.setItem('xt-idioma', a.getAttribute('data-idioma')); } catch (e) {} });
   });
 
   document.getElementById('any').textContent = new Date().getFullYear();
-  posaIdioma(root.getAttribute('data-lang'), false);
+  pintaEstat();
   setInterval(pintaEstat, 60000);
 
   /* Barra de "Truca / Com arribar" al mòbil: apareix quan els botons de dalt ja no es veuen */
