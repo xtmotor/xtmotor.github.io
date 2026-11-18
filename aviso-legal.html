@@ -1,66 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Aviso Legal - XT Motor</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 2rem;
-            color: #333;
-            background-color: #fff;
-            line-height: 1.6;
-        }
-        h1, h2 {
-            color: #f06a00; /* color corporativo naranja */
-        }
-        nav {
-            margin-bottom: 2rem;
-        }
-        nav a {
-            display: inline-block;
-            background-color: #f06a00;
-            color: #fff;
-            text-decoration: none;
-            margin-right: 1rem;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-        nav a:hover {
-            background-color: #d85d00;
-        }
-        section {
-            margin-bottom: 3rem;
-        }
-        a {
-            color: #f06a00;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            margin-top: 4rem;
-            font-size: 0.9rem;
-            color: #666;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aviso legal, privacidad y cookies – XT Motor</title>
+<meta name="description" content="Aviso legal, política de privacidad y política de cookies de XT MOTOR EMPORDÀ, S.L.U., taller mecánico en Figueres.">
+<link rel="canonical" href="https://xtmotor.es/aviso-legal.html">
+<meta name="theme-color" content="#343738">
+<link rel="icon" href="logo_pesta%C3%B1a.ico">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<style>
+@font-face { font-family: "Archivo Black"; src: url(assets/fonts/archivo-black.woff) format("woff"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Fira Sans"; src: url(assets/fonts/fira-sans-400.woff) format("woff"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Fira Sans"; src: url(assets/fonts/fira-sans-600.woff) format("woff"); font-weight: 600; font-display: swap; }
+:root {
+  --grafit: #343738; --grafit-fosc: #232627; --taronja: #F25C3B; --taronja-text: #B83A1B;
+  --calc: #EEF0EF; --linia: #D5D9D8; --gris: #5B6163; --gris-clar: #C9CDCC;
+  --display: "Archivo Black", "Arial Black", system-ui, sans-serif;
+  --text: "Fira Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --pad: clamp(20px, 5vw, 48px);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: var(--text); font-size: 1.0625rem; line-height: 1.6; color: var(--grafit-fosc); background: #fff; }
+a { color: var(--taronja-text); text-underline-offset: 3px; overflow-wrap: anywhere; }
+:focus-visible { outline: 3px solid var(--taronja); outline-offset: 3px; border-radius: 2px; }
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 var(--pad); }
+
+.cap { background: #fff; border-bottom: 1px solid var(--linia); }
+.cap .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 76px; }
+.cap img { height: 52px; width: auto; display: block; }
+.cap a.tornar { color: var(--grafit-fosc); font-weight: 600; }
+
+.titol { background: linear-gradient(var(--grafit) 0 calc(100% - 32px), var(--taronja) calc(100% - 32px) calc(100% - 22px), var(--grafit) calc(100% - 22px)); color: #fff; }
+.titol .wrap { padding-top: 56px; padding-bottom: 76px; }
+.titol h1 { font-family: var(--display); font-weight: 400; font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.05; margin: 0; }
+.titol nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.titol nav a { color: #fff; text-decoration: none; font-weight: 600; border: 2px solid rgba(255,255,255,.6); border-radius: 6px; padding: 8px 14px; }
+.titol nav a:hover { border-color: #fff; }
+
+main .wrap { padding-top: 24px; padding-bottom: 80px; }
+.text { max-width: 72ch; }
+section { padding-top: 40px; scroll-margin-top: 16px; }
+section + section { margin-top: 24px; border-top: 3px solid var(--grafit); }
+h2 { font-family: var(--display); font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1.1; margin: 0 0 18px; }
+h3 { font-size: 1.1875rem; font-weight: 600; margin: 32px 0 8px; line-height: 1.3; }
+h4 { font-size: 1.0625rem; font-weight: 600; margin: 22px 0 6px; }
+p, ul { margin: 0 0 14px; }
+ul { padding-left: 1.3em; }
+li { margin-bottom: 6px; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: .9875rem; }
+th, td { text-align: left; vertical-align: top; padding: 12px 14px 12px 0; border-top: 1px solid var(--linia); }
+thead th { border-top: 0; border-bottom: 2px solid var(--grafit); }
+th { font-weight: 600; }
+td ul { margin: 0; }
+.taula { overflow-x: auto; }
+
+.peu { background: var(--grafit-fosc); color: var(--gris-clar); font-size: .9375rem; padding: 28px 0 32px; }
+.peu .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; }
+.peu p { margin: 0; }
+.peu a { color: #fff; }
+@media (max-width: 600px) { .cap img { height: 44px; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
 </head>
 <body>
 
-    <h1>Aviso Legal y Política de Privacidad</h1>
+<header class="cap">
+  <div class="wrap">
+    <a href="./"><img src="assets/logo.png" width="320" height="270" alt="XT Motor – ir a la página de inicio"></a>
+    <a class="tornar" href="./">Volver a la web</a>
+  </div>
+</header>
 
-    <nav>
-        <a href="#aviso-legal">Aviso Legal</a>
-        <a href="#privacidad">Política de Privacidad</a>
-        <a href="#cookies">Política de Cookies</a>
+<div class="titol">
+  <div class="wrap">
+    <h1>Aviso legal, privacidad y cookies</h1>
+    <nav aria-label="Apartados">
+      <a href="#aviso-legal">Aviso legal</a>
+      <a href="#privacidad">Política de privacidad</a>
+      <a href="#cookies">Política de cookies</a>
     </nav>
+  </div>
+</div>
 
-    <section id="aviso-legal">
+<main>
+  <div class="wrap">
+    <div class="text">
+<section id="aviso-legal">
           <h2>Aviso Legal</h2>
     <p>En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, de 11 de Julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, le informamos que el Sitio Web <a href="https://www.xtmotor.es/">https://www.xtmotor.es/</a> (en adelante, el sitio "Web") es titularidad de XT MOTOR EMPORDÀ, S.L.U. (en adelante XT MOTOR), con domicilio social en C/Torras i Bages, 26, 17600 - Figueres (Girona), con CIF: B17237827. Inscrita en el Registro Mercantil de Girona: T 3089, F 153, S 8, H GI, 60386, I/A 3.</p>
 
@@ -81,7 +108,7 @@
 
     <h3>Acceso al sitio web</h3>
     <p>El acceso al sitio web por parte de los usuarios es de carácter libre y gratuito. Algunos servicios pueden encontrarse sujetos a contratación previa del servicio.</p>
-    <p>En caso de ser necesario que el usuario aporte datos personales para acceder a alguno de los servicios, la recogida y el tratamiento de los datos se realizará de conformidad con la normativa vigente, en concreto con el RGPD. Para más información, consulte nuestra <a href="https://xtmotor.es/aviso-legal.html#privacidad">política de privacidad</a>.</p>
+    <p>En caso de ser necesario que el usuario aporte datos personales para acceder a alguno de los servicios, la recogida y el tratamiento de los datos se realizará de conformidad con la normativa vigente, en concreto con el RGPD. Para más información, consulte nuestra <a href="#privacidad">política de privacidad</a>.</p>
 
     <h3>Contenido y uso</h3>
     <p>La visita al sitio web por parte del usuario deberá hacerse de forma responsable y de conformidad a la legalidad vigente, la buena fe, el presente Aviso Legal y respetando los derechos de propiedad intelectual e industrial de titularidad de XT MOTOR o cualquier otra persona física o jurídica.</p>
@@ -111,8 +138,7 @@
     <p>XT MOTOR podrá suspender temporalmente y sin previo aviso, la accesibilidad al sitio web con motivo de operaciones de mantenimiento, reparación, actualización o mejora. No obstante, siempre que las circunstancias lo permitan, XT MOTOR comunicará al usuario, con antelación suficiente, la fecha prevista para la suspensión de los contenidos.</p>
     <p>Asimismo, de conformidad con los arts. 11 y 16 de la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico (LSSICE), XT MOTOR se compromete a la eliminación o, en su caso, bloqueo de los contenidos que pudieran afectar o ser contrarios a la legislación vigente, los derechos de terceros o la moral y orden público.</p>
     <h3>Cookies</h3>
-    <p>XT MOTOR utiliza cookies, a los efectos de optimizar y personalizar su navegación por el sitio web. Las cookies son ficheros físicos de información que se alojan en el propio terminal del usuario, la información recogida mediante las cookies sirve para facilitar la navegación del usuario por el portal y optimizar la experiencia de navegación. Los datos recopilados mediante las cookies pueden ser compartidos con los creadores de las mismas, pero en ningún caso la información obtenida por las mismas será asociada a datos personales ni a datos que puedan identificar al usuario.</p>
-    <p>Sin embargo, si el usuario no desea que se instalen cookies en su disco duro, tiene la posibilidad de configurar el navegador de tal modo que impida la instalación de estos archivos. Para obtener más información consulte nuestra Política de Cookies <a href="https://xtmotor.es/aviso-legal.html#cookies">Política de Cookies</a>.</p>
+    <p>Este sitio web no utiliza cookies de análisis ni de publicidad. Únicamente guarda en el navegador del usuario, cuando este lo elige, el idioma en que prefiere ver la web, lo que constituye un almacenamiento técnico que no requiere consentimiento. Para más información, consulte nuestra <a href="#cookies">Política de Cookies</a>.</p>
 
     <h3>Enlaces (links)</h3>
     <p>La presencia de enlaces (links) en el sitio web de XT MOTOR hacia otros sitios de Internet tiene finalidad meramente informativa y en ningún caso suponen sugerencia, invitación o recomendación sobre los mismos. XT MOTOR no asumirá responsabilidad por los contenidos de un enlace perteneciente a un sitio web ajeno, ni garantizará la fiabilidad, exactitud, amplitud, veracidad, validez y disponibilidad técnica.</p>
@@ -126,11 +152,11 @@
     </section>
 
     <section id="privacidad">
-       <h1>Política de privacidad</h1>
+       <h2>Política de privacidad</h2>
 
 
-  <h2>Información básica sobre Protección de Datos</h2>
-  <table>
+  <h3>Información básica sobre Protección de Datos</h3>
+  <div class="taula"><table>
     <tr>
       <th>Responsable</th>
       <td>XT MOTOR EMPORDÀ, S.L.U. (en adelante XT MOTOR)</td>
@@ -166,11 +192,11 @@
     </tr>
     <tr>
       <th>Información adicional</th>
-      <td>Puede consultar la información adicional y detallada sobre Protección de Datos en las Cláusulas anexas que se encuentran en: <a href="https://xtmotor.es/aviso-legal.html#privacidad" target="_blank" rel="noopener">Politica de privacidad</a></td>
+      <td>Puede consultar la información adicional y detallada sobre Protección de Datos en las Cláusulas anexas que se encuentran en: <a href="#privacidad">Politica de privacidad</a></td>
     </tr>
-  </table>
+  </table></div>
 
-  <h2>Compromiso con su privacidad</h2>
+  <h3>Compromiso con su privacidad</h3>
   <p>XT MOTOR EMPORDÀ, S.L.U. (en adelante XT MOTOR) trabajamos para ofrecerle a través de nuestros productos y servicios la mejor experiencia posible. En algunos casos, es necesario recabar información para conseguirlo. Nos importa su privacidad y creemos que debemos ser transparentes al respecto.</p>
   <p>Por ello, y a efectos de lo previsto en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016 (en adelante, “RGPD”) relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos, y la LEY 34/2002, de 11 de julio, de Servicios de la Sociedad de la información y de comercio electrónico (en adelante, “LSSI”), XT MOTOR informa al usuario que, como responsable del tratamiento, incorporará los datos de carácter personal facilitados por los usuarios en un fichero automatizado.</p>
     <p>Nuestro compromiso empieza por explicarle lo siguiente:</p>
@@ -184,7 +210,7 @@
   
   <p>Si desea obtener más información sobre el tratamiento de sus datos, consulte los distintos apartados de la política de privacidad que se encuentran a continuación:</p>
 
-  <h2>Responsable del tratamiento de sus datos personales</h2>
+  <h3>Responsable del tratamiento de sus datos personales</h3>
   <ul>
     <li><strong>Denominación social:</strong> XT MOTOR EMPORDÀ, S.L.U.</li>
     <li><strong>Nombre comercial:</strong> XT MOTOR</li>
@@ -195,7 +221,7 @@
   
   <p>XT MOTOR ha designado una persona de contacto interna como coordinador de la adaptación dentro de su organización. Si desea hacer una consulta en relación al tratamiento de sus datos personales, puede ponerse en contacto con él mediante el xtmotor@hotmail.es. </p>
 
-  <h2>Datos personales que recopilamos:</h2>
+  <h3>Datos personales que recopilamos:</h3>
   <ul>
     <li>Nombre, dirección, fecha de nacimiento</li>
     <li>Teléfono y correo electrónico</li>
@@ -207,7 +233,7 @@
   </ul>
   <p>En algunos casos, es obligatoria la cumplimentación del formulario de registro para acceder y disfrutar de determinados servicios ofrecidos en la web; asimismo, no facilitar los datos personales solicitados o el no aceptar la presente política de protección de datos supone la imposibilidad de suscribirse, registrarse o participar en cualquiera de las promociones en las que se soliciten datos carácter personal.</p>
 
-  <h2>Finalidades del tratamiento:</h2>
+  <h3>Finalidades del tratamiento:</h3>
   <ul>
     <li>Gestionar la contratación de alguno de nuestros servicios, ya sea online o en nuestras oficinas físicas.</li>
     <li>Gestionar el envío de la información que nos soliciten</li>
@@ -217,7 +243,7 @@
   </ul>
   <p>Informamos que los datos personales que se obtengan como consecuencia de tu registro como usuario formarán parte del Registro de Actividades y operaciones de Tratamiento (RAT), que se actualizará periódicamente de acuerdo con lo establecido en el RGPD.</p>
 
-  <h2>Legitimación del tratamiento de sus datos:</h2>
+  <h3>Legitimación del tratamiento de sus datos:</h3>
   <ul>
     <li>Consentimiento del interesado para los formularios de contacto, las solicitudes de información o alta en newsletters.</li>
     <li>Ejecución de contrato para la contratación de servicios y productos o la contratación de personal en el ámbito laboral.</li>
@@ -225,13 +251,13 @@
     <li>Cumplimiento de obligaciones legales para prevención del fraude, comunicación con Autoridades públicas y reclamaciones de terceros.</li>
   </ul>
 
-  <h2>Plazo de conservación de sus datos:</h2>
+  <h3>Plazo de conservación de sus datos:</h3>
   <p>El tratamiento de los datos con las finalidades descritas se mantendrá durante el tiempo necesario para cumplir con la finalidad de su recogida (por ejemplo, mientras dure la relación comercial), así como para el cumplimiento de las obligaciones legales que se deriven del tratamiento de los datos.
 
 El tiempo de conservación de los CV de los candidatos a procesos de selección de personal, no seleccionados, será de un año desde la recepción del mismo.
 </p>
 
-  <h2>Destinatarios de sus datos</h2>
+  <h3>Destinatarios de sus datos</h3>
   <p>En algunos casos, solo cuando sea necesario, XT MOTOR proporcionará datos de los usuarios a terceros. Sin embargo, nunca se venderán los datos a terceros. Los proveedores de servicios externos (por ejemplo, proveedores de pago o empresas de reparto) con los que XT MOTOR trabaje pueden usar los datos para proporcionar los servicios correspondientes, sin embargo, no usarán dicha información para fines propios o para cesión a terceros.</p>
   <p>XT MOTOR procura garantizar la seguridad de los datos personales cuando se envían fuera de la empresa y se asegura que los terceros proveedores de servicio respetan la confidencialidad y cuentan con las medidas adecuadas para proteger los datos personales. Dichos terceros tienen la obligación de garantizar que la información se trata conforme con la normativa de privacidad de datos</p>
   <p>En algunos casos, la ley puede exigir que se revelen datos personales a organismos públicos u otras partes, solo se revelará lo estrictamente necesario para el cumplimiento de dichas obligaciones legales.
@@ -239,10 +265,12 @@ El tiempo de conservación de los CV de los candidatos a procesos de selección 
 Los datos personales obtenidos también podrán ser compartidos con otras empresas actuales o futuras de XT MOTOR.
 </p>
 
-  <h2>Ubicación del almacenamiento de sus datos:</h2>
-  <p>Con carácter general, los datos se almacenan dentro de la UE. Los datos que se envíen a terceros que no pertenezcan a la UE, nos aseguraremos de que ofrezcan un nivel de protección suficiente, ya sea porque cuentan con Normas Corporativas Vinculantes (BCR) o porque se hayan adherido al “Privacy Shield” o al acuerdo que sea vigente en cada momento.</p>
+  <p>Este sitio web está alojado en GitHub Pages, servicio de GitHub, Inc. Cuando se visita la web, GitHub registra y conserva la dirección IP del visitante por motivos de seguridad. Puede consultar la <a href="https://docs.github.com/es/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Declaración de privacidad de GitHub</a>.</p>
 
-  <h2>¿Qué derechos le asisten y cómo puede ejercerlos?</h2>
+  <h3>Ubicación del almacenamiento de sus datos:</h3>
+  <p>Con carácter general, los datos se almacenan dentro de la UE. Los datos que se envíen a terceros que no pertenezcan a la UE, nos aseguraremos de que ofrezcan un nivel de protección suficiente, ya sea porque cuentan con Normas Corporativas Vinculantes (BCR) o porque se acojan al Marco de Privacidad de Datos UE-EE. UU., a las cláusulas contractuales tipo aprobadas por la Comisión Europea o al mecanismo que esté vigente en cada momento.</p>
+
+  <h3>¿Qué derechos le asisten y cómo puede ejercerlos?</h3>
   <p>Puedes dirigir sus comunicaciones y ejercitar sus derechos mediante una petición en el siguiente correo electrónic <a href="mailto:xtmotor@hotmail.es">xtmotor@hotmail.es</a>. En virtud de lo que establece el RGPD puede solicitar:</p>
   <ul>
     <li>Derecho de acceso: puede pedir información de aquellos datos personales que dispongamos acerca de usted.</li>
@@ -257,34 +285,33 @@ Los datos personales obtenidos también podrán ser compartidos con otras empres
 Asimismo, si tiene alguna queja sobre el tratamiento de los datos puedes presentar una reclamación ante la autoridad de protección de datos.
 </p>
 
-  <h2>¿Quién es el responsable de la exactitud y veracidad de los datos facilitados?</h2>
+  <h3>¿Quién es el responsable de la exactitud y veracidad de los datos facilitados?</h3>
   <p>El usuario es el único responsable de la veracidad y corrección de los datos incluidos, exonerando a XT MOTOR de cualquier responsabilidad al respecto. Los usuarios garantizan y responden, en cualquier caso, de la exactitud, vigencia y autenticidad de los datos personales facilitados, y se comprometen a mantenerlos debidamente actualizados. El usuario acepta proporcionar información completa y correcta en el formulario de registro o suscripción. XT MOTOR se reserva el derecho de finalizar los servicios contratados que se hubiera celebrado con los usuarios, en caso de que los datos que haya facilitado sean falsos, incompletos, inexactos o no estén actualizados.</p>
   <p>XT MOTOR no responde de la veracidad de las informaciones que no sean de elaboración propia y de las que se indique otra fuente, por lo que tampoco asume responsabilidad alguna en cuanto a hipotéticos perjuicios que pudieran originarse por el uso de dicha información.</p>
   <p>XT MOTOR se reserva el derecho a actualizar, modificar o eliminar la información contenida en sus páginas web pudiendo incluso limitar o no permitir el acceso a dicha información. Se exonera a XT MOTOR de responsabilidad ante cualquier daño o perjuicio que pudiera sufrir el usuario como consecuencia de errores, defectos u omisiones, en la información facilitada por XT MOTOR siempre que proceda de fuentes ajenas a la misma.</p>
   <p>Asimismo, el usuario certifica que es mayor de 14 años y que posee la capacidad legal necesaria para la prestación del consentimiento en cuanto al tratamiento de sus datos de carácter personal.</p>
 
-  <h2>¿Cómo tratamos los datos personales de los menores de edad?</h2>
+  <h3>¿Cómo tratamos los datos personales de los menores de edad?</h3>
   <p>En principio nuestros productos o servicios no van dirigidos específicamente a menores de edad. Sin embargo, en el supuesto de que alguno de ellos se dirija a menores de catorce años, de conformidad con el artículo 8 del RGPD y el artículo 7 de la LO 3/2018, de 5 de diciembre (LOPDGDD), XT MOTOR exigirá el consentimiento válido, libre, inequívoco, específico e informado de sus tutores legales para tratar los datos personales de los menores. En este caso, se exigirá el DNI u otra forma de identificación de quien preste el consentimiento.</p>
   
   <p>En el caso de mayores de catorce años podrá procederse al tratamiento de los datos con el consentimiento del usuario, exceptuando aquellos casos en los que la Ley exija la asistencia de los titulares de la patria potestad o tutela.</p>
 
-  <h2>Medidas de seguridad para proteger los datos</h2>
+  <h3>Medidas de seguridad para proteger los datos</h3>
   <p>XT MOTOR ha adoptado los niveles de seguridad de protección de los Datos Personales legalmente requeridos, y procura instalar aquellos otros medios y medidas técnicas adicionales a su alcance para evitar la pérdida, mal uso, alteración, acceso no autorizado y robo de los Datos Personales facilitados a XT MOTOR.</p>
   <p>XT MOTOR no es responsable de hipotéticos daños o perjuicios que se pudieran derivar de interferencias, omisiones, interrupciones, virus informáticos, averías telefónicas o desconexiones en el funcionamiento operativo de este sistema electrónico, motivadas por causas ajenas a XT MOTOR; de retrasos o bloqueos en el uso del presente sistema electrónico causados por deficiencias o sobrecargas de líneas telefónicas o sobrecargas en el Centro de Procesos de Datos, en el sistema de Internet o en otros sistemas electrónicos, así como de daños que puedan ser causados por terceras personas mediante intromisiones ilegítimas fuera del control de XT MOTOR. Ello, no obstante, el usuario debe ser consciente de que las medidas de seguridad en Internet no son inexpugnables.</p>
 
-  <h2>Enlaces externos</h2>
+  <h3>Enlaces externos</h3>
   <p>En el sitio web https://www.xtmotor.es/ puede haber enlaces a otras páginas web. Al clicar en uno de estos enlaces y acceder a un sitio web externo, la visita estará sujeta a la política de privacidad de dicho sitio web, quedando XT MOTOR desvinculada de cualquier tipo de responsabilidad acerca de su política de privacidad.</p>
 
-  <h2>Uso de cookies</h2>
-  <p>El sitio web y las RRSS de XT MOTOR utilizan cookies, a los efectos de optimizar y personalizar su navegación por el mismo. Las cookies son ficheros físicos de información que se alojan en el propio terminal del usuario, la información recogida mediante las cookies sirve para facilitar la navegación del usuario por el portal y optimizar la experiencia de navegación. Los datos recopilados mediante las cookies pueden ser compartidos con los creadores de las mismas, pero en ningún caso la información obtenida por las mismas será asociada a datos personales ni a datos que puedan identificar al usuario.</p>
-  <p>Sin embargo, si el usuario no desea que se instalen cookies en su disco duro, tiene la posibilidad de configurar el navegador de tal modo que impida la instalación de estos archivos. Para obtener más información consulte nuestra Política de Cookies  <a href="https://xtmotor.es/aviso-legal.html#cookies" target="_blank" rel="noopener">Política de Cookies</a>.</p>
+  <h3>Uso de cookies</h3>
+  <p>Este sitio web no utiliza cookies de análisis ni de publicidad. Para más información, consulte nuestra <a href="#cookies">Política de Cookies</a>.</p>
 
-  <h2>¿Puede modificarse la política de privacidad?</h2>
+  <h3>¿Puede modificarse la política de privacidad?</h3>
   <p>Nos reservamos el derecho a modificar esta política de privacidad. Recomendamos revisarla periódicamente.</p>
     </section>
 
     <section id="cookies">
-        <h1>Política de Cookies</h1>
+        <h2>Política de Cookies</h2>
 
 
   <p>El sitio web <a href="https://www.xtmotor.es" target="_blank" rel="noopener">https://www.xtmotor.es</a> es responsabilidad de XT MOTOR EMPORDÀ, S.L.U. (en adelante, XT MOTOR), con domicilio en C/Torras i Bages, 26, 17600 - Figueres (Girona), CIF B17237827 y correo electrónico <a href="mailto:xtmotor@hotmail.es">xtmotor@hotmail.es</a>.</p>
@@ -293,86 +320,68 @@ Asimismo, si tiene alguna queja sobre el tratamiento de los datos puedes present
   
   <p>Consecuentemente, la utilización de cookies se le aplica la presente "Política de Uso de Cookies" que ha sido elaborada con el fin de que el usuario quede informado de los diferentes usos que se llevan a cabo en estos dispositivos y, pueda consentir su tratamiento de manera informada, de conformidad con lo previsto en la legislación vigente.</p>
 
-  <h2>¿Qué es una cookie?</h2>
+  <h3>¿Qué es una cookie?</h3>
   <p>Una cookie es un fichero que se descarga en su ordenador al acceder el Usuario a determinadas páginas web. Las cookies permiten a una página web, entre otras cosas, almacenar y recuperar información sobre los hábitos de navegación de un usuario o de su equipo y, dependiendo de la información que contengan y de la forma en que utilice su equipo, pueden utilizarse para reconocer al usuario.</p>
 
-  <h2>¿Qué tipos de cookies existen?</h2>
-  <h3>Según su duración:</h3>
+  <h3>¿Qué tipos de cookies existen?</h3>
+  <h4>Según su duración:</h4>
   <ul>
     <li><strong>Cookies de sesión:</strong> Son un tipo de cookies diseñadas para recabar y almacenar datos mientras el usuario accede a una página web.</li>
     <li><strong>Cookies permanentes:</strong> Son un tipo de cookies en el que los datos siguen almacenados en el terminal y pueden ser accedidos y tratados durante un periodo definido por el responsable de la cookie.</li>
   </ul>
 
-  <h3>Según su titularidad:</h3>
+  <h4>Según su titularidad:</h4>
   <ul>
     <li><strong>Cookies propias:</strong> Gestionadas por XT MOTOR.</li>
     <li><strong>Cookies de terceros:</strong> Son aquellas cuya titularidad es de un tercero, distinto de XT MOTOR, que será quien trate la información recabada.</li>
   </ul>
 
-  <h3>Según su finalidad:</h3>
+  <h4>Según su finalidad:</h4>
   <ul>
     <li><strong>Cookies técnicas y de personalización:</strong> Son aquéllas que sirven para mejorar el servicio, localizar incidencias, reconocer al usuario, etc.</li>
     <li><strong>Cookies de análisis y publicidad:</strong> Son aquéllas que sirven para analizar información sobre la navegación y ofrecer publicidad, sea genérica o personalizada.</li>
   </ul>
 
-  <h2>Cookies más habituales</h2>
+  <h3>Cookies más habituales</h3>
   <ul>
     <li><strong>Técnicas:</strong> Son cookies PROPIAS, de sesión, de identificación, de configuración y de registro, estrictamente necesarias para la identificación del usuario y para la prestación de los servicios solicitados por el usuario. La información obtenida a través de las mismas es tratada únicamente por XT MOTOR.</li>
     <li><strong>De análisis:</strong> Son aquéllas que, bien tratadas por nosotros o por terceros, nos permiten cuantificar el número de usuarios y así realizar la medición y análisis estadístico de la utilización que hacen los usuarios del servicio ofertado. Para ello se analiza su navegación en nuestra página web con el fin de mejorar la oferta de productos o servicios que le ofrecemos.</li>
     <li><strong>De publicidad:</strong> Son aquéllas que, bien tratadas por nosotros o por terceros, permiten la gestión, de la forma más eficaz posible, de los espacios publicitarios que se pudieran incluir en nuestra página web y/o almacenan información del comportamiento de los usuarios obtenida a través de la observación continuada. Gracias a ellas, podemos conocer los hábitos de navegación en internet y mostrarle publicidad relacionada con su perfil de navegación.</li>
   </ul>
 
-  <h2>¿Para qué se usan las cookies?</h2>
+  <h3>¿Para qué se usan las cookies?</h3>
   <p>Las cookies se utilizan para poder ofrecerle servicios y/o publicidad personalizados, para analizar el funcionamiento del sistema, reconocerle cuando accede como usuario, localizar incidencias y problemas que puedan surgir y solventarlos en el menor plazo posible, así como analizar y medir el uso y actividad de la página web.</p>
 
-  <h2>¿Se necesita mi consentimiento?</h2>
-  <p>No se precisa el consentimiento para la instalación de cookies técnicas o las que sean estrictamente necesarias para la prestación de un servicio de la sociedad de la información expresamente solicitado por el destinatario.
+  <h3>¿Se necesita mi consentimiento?</h3>
+  <p>No se precisa el consentimiento para la instalación de cookies técnicas o las que sean estrictamente necesarias para la prestación de un servicio de la sociedad de la información expresamente solicitado por el destinatario. Tampoco para las de personalización que el propio usuario decide, como la elección del idioma.</p>
+  <p>Como este sitio web solo utiliza almacenamiento de este tipo, no muestra ningún aviso de cookies. Si en el futuro se incorporasen cookies de análisis, de publicidad o de terceros, se solicitará el consentimiento previo del usuario y se actualizará esta política.</p>
 
-Para el resto, sí se precisa del consentimiento del interesado que se puede solicitar por distintas vías. En el caso de XT MOTOR, se entenderá otorgado si Vd. acepta las cookies opcionales y no necesarias para el funcionamiento de la web y podrá revocar el consentimiento y desactivar las cookies entrando en el apartado “cómo desactivar las cookies” que se encuentra al final de este documento.
-.</p>
+  <h3>¿Qué cookies utiliza esta web?</h3>
+  <p>Este sitio web <strong>no utiliza cookies de análisis ni de publicidad</strong>, ni propias ni de terceros.</p>
+  <p>Solo cuando el usuario elige el idioma de la web (catalán o castellano), su elección se guarda en el almacenamiento local del navegador para mostrarle la web en ese idioma en próximas visitas. Es un almacenamiento técnico de personalización decidido por el usuario, exento de consentimiento.</p>
+  <p>Los botones «Cómo llegar» abren Google Maps, que es un sitio web externo con su propia política de cookies. Esta web no inserta mapas ni otros contenidos de terceros.</p>
 
-  <h2>¿Qué cookies utiliza esta web?</h2>
-  <p><strong>Cookies técnicas:</strong> Son aquellas creadas y gestionadas únicamente por nosotros, y permiten al usuario la navegación a través de nuestra página web y la utilización de las diferentes opciones como, por ejemplo, identificar la sesión, personalizar información o acceder a zonas de acceso restringido.</p>
-  <p><strong>Cookies de análisis:</strong> El lugar web de XT MOTOR, utiliza Google Analytics, una herramienta de analítica web desarrollada por Google, que ayuda a los propietarios de sitios web a medir cómo interactúan los usuarios con el contenido del sitio.  Para la prestación de estos servicios, Google Analytics utilizan cookies que recopilan la información, incluida la dirección IP del usuario que será trasmitida, tratada y almacenada por Google en los términos fijados en la web Google.com.
-Esta web puede contener enlaces a sitios web de terceros con políticas de privacidad ajenas a nuestra web que usted podrá decidir si acepta o no cuando acceda a ellos.
- Más información en:  
-  <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage" target="_blank" rel="noopener">Uso de cookies en Google Analytics</a>.</p>
-  <p>Esta web también puede contener enlaces a sitios de terceros con sus propias políticas de privacidad y cookies.</p>
-
-  <h3>Cookies utilizadas en https://www.xtmotor.es/</h3>
-  <table>
+  <h4>Almacenamiento utilizado en https://xtmotor.es/</h4>
+  <div class="taula"><table>
     <thead>
       <tr>
         <th>Propiedad</th>
-        <th>Nombre de la cookie</th>
+        <th>Nombre</th>
         <th>Finalidad</th>
-        <th>Expira</th>
+        <th>Duración</th>
       </tr>
     </thead>
     <tbody>
-      <!-- Puedes completar esta tabla con cookies concretas si usas algún plugin o script -->
       <tr>
-        <td>Google Analytics</td>
-        <td>_ga</td>
-        <td>Sirve para distinguir a los usuarios</td>
-        <td>2 años</td>
-      </tr>
-      <tr>
-        <td>Google Analytics</td>
-        <td>_gid</td>
-        <td>Sirve para distinguir a los usuarios</td>
-        <td>24 horas</td>
-      </tr>
-      <tr>
-        <td>XT MOTOR</td>
-        <td>cookie_notice_accepted</td>
-        <td>Almacena la aceptación de la política de cookies</td>
-        <td>1 mes</td>
+        <td>XT MOTOR (propia)</td>
+        <td>xt-idioma (almacenamiento local)</td>
+        <td>Recordar el idioma elegido por el usuario</td>
+        <td>Hasta que el usuario lo borre desde su navegador</td>
       </tr>
     </tbody>
-  </table>
+  </table></div>
 
-  <h2>¿Cómo desactivar cookies?</h2>
+  <h3>¿Cómo desactivar cookies?</h3>
   <p>Puede permitir, bloquear o eliminar las cookies desde su navegador:</p>
   <ul>
     <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener">Firefox</a></li>
@@ -383,16 +392,22 @@ Esta web puede contener enlaces a sitios web de terceros con políticas de priva
     <li><a href="http://help.opera.com/Windows/11.50/es-ES/cookies.html" target="_blank" rel="noopener">Opera</a></li>
   </ul>
 
-  <h2>Ejercicio de derechos</h2>
-  <p>Puede conocer y ejercer sus derechos en materia de protección de datos accediendo a nuestra <a href="https://xtmotor.es/aviso-legal.html#privacidad" target="_blank" rel="noopener">Política de Privacidad</a>.</p>
+  <h3>Ejercicio de derechos</h3>
+  <p>Puede conocer y ejercer sus derechos en materia de protección de datos accediendo a nuestra <a href="#privacidad">Política de Privacidad</a>.</p>
 
-  <h2>Información adicional</h2>
+  <h3>Información adicional</h3>
   <p>Para más información sobre el uso de cookies, consulte la <a href="https://www.aepd.es/es/documento/guia-cookies.pdf" target="_blank" rel="noopener">Guía de Cookies de la AEPD</a>.</p>
     </section>
+    </div>
+  </div>
+</main>
 
-    <footer>
-        &copy; 2025 XT Motor. Todos los derechos reservados.
-    </footer>
-
+<footer class="peu">
+  <div class="wrap">
+    <p>© <span id="any">2026</span> XT MOTOR EMPORDÀ, S.L.U. — C/ Torras i Bages, 26, 17600 Figueres</p>
+    <p><a href="./">Volver a la web</a></p>
+  </div>
+</footer>
+<script>document.getElementById('any').textContent = new Date().getFullYear();</script>
 </body>
 </html>
