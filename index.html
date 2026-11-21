@@ -39,6 +39,7 @@
 {
   "@context": "https://schema.org",
   "@type": "AutoRepair",
+  "@id": "https://xtmotor.es/#taller",
   "name": "XT Motor",
   "alternateName": "Taller XT Motor Figueres",
   "legalName": "XT MOTOR EMPORDÀ, S.L.U.",
@@ -105,7 +106,7 @@ h1, h2 { font-family: var(--display); font-weight: 400; line-height: 1.04; lette
 h2 { font-size: clamp(1.9rem, 3.6vw, 2.75rem); }
 h3 { font-size: 1.125rem; font-weight: 600; line-height: 1.3; margin: 0 0 4px; }
 p { margin: 0 0 1rem; }
-#serveis, #horari, #on-som, #contacte { scroll-margin-top: 84px; }
+#serveis, #horari, #on-som, #preguntes, #contacte { scroll-margin-top: 84px; }
 
 .salta { position: absolute; left: 12px; top: -60px; background: var(--grafit); color: #fff; padding: 10px 14px; border-radius: 6px; z-index: 50; }
 .salta:focus { top: 12px; }
@@ -160,6 +161,21 @@ p { margin: 0 0 1rem; }
 .llista li { display: grid; grid-template-columns: 30px 1fr; gap: 16px; padding: 20px 0 22px; border-top: 1px solid var(--linia); }
 .llista svg { width: 30px; height: 30px; color: var(--grafit); margin-top: 1px; }
 .llista p { color: var(--gris); margin: 0; font-size: 1rem; }
+.llista li { position: relative; }
+.llista h3 a { color: inherit; text-decoration: underline; text-decoration-color: var(--taronja); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.llista h3 a::after { content: ""; position: absolute; inset: 0; }
+.llista li:hover h3 a { color: var(--taronja-text); }
+
+/* Preguntes freqüents */
+.preguntes .wrap { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(32px, 6vw, 80px); }
+.preguntes .intro p { color: var(--gris); max-width: 34ch; margin-top: 18px; }
+.faq details { border-top: 1px solid var(--linia); }
+.faq details:last-child { border-bottom: 1px solid var(--linia); }
+.faq summary { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 18px 0; font-weight: 600; font-size: 1.0625rem; cursor: pointer; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-family: var(--display); font-size: 1.4rem; line-height: 1; color: var(--taronja-text); flex: none; }
+.faq details[open] summary::after { content: "\2212"; }
+.faq details p { margin: 0 0 20px; color: var(--gris); max-width: 68ch; }
 
 .proces { background: var(--calc); }
 .passos { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 4vw, 48px); counter-reset: pas; }
@@ -208,10 +224,10 @@ p { margin: 0 0 1rem; }
   .cap .wrap { min-height: 66px; }
   .logo img { height: 48px; }
   .hero .wrap { grid-template-columns: 1fr; gap: 30px; padding-top: 56px; padding-bottom: 48px; }
-  .serveis .wrap, .lloc .wrap { grid-template-columns: 1fr; }
+  .serveis .wrap, .lloc .wrap, .preguntes .wrap { grid-template-columns: 1fr; }
   .barra { display: flex; }
   .peu { padding-bottom: 104px; }
-  #serveis, #horari, #on-som, #contacte { scroll-margin-top: 0; }
+  #serveis, #horari, #on-som, #preguntes, #contacte { scroll-margin-top: 0; }
 }
 @media (max-width: 700px) {
   .foto-hero img { height: auto; aspect-ratio: 4 / 3; }
@@ -223,6 +239,79 @@ p { margin: 0 0 1rem; }
   .btn, .barra { transition: none; }
 }
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "inLanguage": "ca",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Cal demanar hora?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Et recomanem trucar abans al 972 503 067 perquè et puguem donar dia i hora i el cotxe estigui el mínim temps possible al taller. Si és urgent o el cotxe no arrenca, truca'ns igualment i mirarem com t'hi podem ajudar."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Treballeu amb totes les marques?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sí, reparem i fem el manteniment de cotxes i furgonetes de totes les marques."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Feu pressupost abans de reparar?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sí. Abans de començar et diem què cal fer i quant costarà. Tens dret a un pressupost per escrit, vàlid com a mínim 12 dies hàbils, i no fem cap reparació sense la teva conformitat. Si durant la feina trobem una altra avaria, t'avisem abans de continuar."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quina garantia tenen les reparacions?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Totes les reparacions tenen la garantia legal de 3 mesos o 2.000 quilòmetres. Els recanvis nous tenen, a més, la seva pròpia garantia."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Si el cotxe és en garantia, puc fer-hi el manteniment aquí?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sí. La normativa europea permet fer el manteniment en un taller independent sense perdre la garantia del fabricant, sempre que se segueixi el pla de manteniment de la marca i es facin servir recanvis de qualitat equivalent. Ho deixem tot detallat a la factura."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quan he de passar la ITV?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Els turismes estan exempts fins als 4 anys; després, cada 2 anys fins als 10 i, a partir d'aleshores, cada any. Abans d'anar-hi, et podem fer la pre-ITV."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quant triga una reparació?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Depèn de la feina i de si cal demanar recanvis. Un canvi d'oli o de pneumàtics sovint es pot fer el mateix dia; per a reparacions més grans, et donem una data aproximada d'entrega amb el pressupost."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Com puc pagar?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Pots pagar en efectiu o amb targeta."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -235,6 +324,7 @@ p { margin: 0 0 1rem; }
       <a href="#serveis">Serveis</a>
       <a href="#horari">Horari</a>
       <a href="#on-som">On som</a>
+      <a href="#preguntes">Preguntes</a>
       <a href="#contacte">Contacte</a>
     </nav>
     <nav class="idioma" aria-label="Idioma">
@@ -300,84 +390,84 @@ p { margin: 0 0 1rem; }
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 5.5a4.5 4.5 0 0 0-5.8 5.8L3.5 16.5a2.1 2.1 0 0 0 3 3l5.2-5.2a4.5 4.5 0 0 0 5.8-5.8l-2.6 2.6-2.3-.7-.7-2.3z"/></svg>
           <div>
-            <h3>Mecànica general</h3>
+            <h3><a href="/serveis/mecanica-general">Mecànica general</a></h3>
             <p>Reparacions de tota mena en cotxes i furgonetes.</p>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 2.5h6v3H9z"/><path d="M9 13l2.2 2.2L15.5 11"/></svg>
           <div>
-            <h3>Revisió i manteniment</h3>
+            <h3><a href="/serveis/revisio-manteniment">Revisió i manteniment</a></h3>
             <p>Canvi d'oli i filtres, i revisions periòdiques perquè el cotxe duri més.</p>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
           <div>
-            <h3>Pre-ITV</h3>
+            <h3><a href="/serveis/pre-itv">Pre-ITV</a></h3>
             <p>Revisem el cotxe abans de la ITV perquè hi vagi a punt.</p>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v2.5M12 18.5V21M3 12h2.5M18.5 12H21M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M5.6 18.4l1.8-1.8M16.6 7.4l1.8-1.8"/></svg>
           <div>
-            <h3>Pneumàtics</h3>
+            <h3><a href="/serveis/pneumatics">Pneumàtics</a></h3>
             <p>Canvi, reparació i equilibrat de pneumàtics de qualitat.</p>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="13" r="7.5"/><circle cx="11" cy="13" r="2"/><circle cx="14.2" cy="16.2" r=".6"/><circle cx="7.8" cy="16.2" r=".6"/><circle cx="7.8" cy="9.8" r=".6"/><circle cx="14.2" cy="9.8" r=".6"/><path d="M14.25 4.07A9.5 9.5 0 0 1 19.6 8.98L16.44 10.46A6 6 0 0 0 13.05 7.36z"/></svg>
           <div>
-            <h3>Frens</h3>
+            <h3><a href="/serveis/frens">Frens</a></h3>
             <p>Revisió i substitució de pastilles, discos i líquid de frens.</p>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="12" r="3.5"/><circle cx="17" cy="12" r="3.5"/><path d="M7 8.5h10M7 15.5h10"/><circle cx="7" cy="12" r=".8"/><circle cx="17" cy="12" r=".8"/></svg>
           <div>
-            <h3>Embragatge i distribució</h3>
+            <h3><a href="/serveis/embragatge-distribucio">Embragatge i distribució</a></h3>
             <p>Canvi d'embragatge i de corretja de distribució.</p>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.5h10M7 20.5h10"/><path d="M12 3.5 8 6l8 2.5L8 11l8 2.5L8 16l8 2.5-4 2"/></svg>
           <div>
-            <h3>Suspensió</h3>
+            <h3><a href="/serveis/suspensio">Suspensió</a></h3>
             <p>Amortidors, ròtules, molles i silentblocs, per anar còmode i segur.</p>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g id="brac"><path d="M12 12V2.5M9.6 4.6 12 7l2.4-2.4"/></g><use href="#brac" transform="rotate(60 12 12)"/><use href="#brac" transform="rotate(120 12 12)"/><use href="#brac" transform="rotate(180 12 12)"/><use href="#brac" transform="rotate(240 12 12)"/><use href="#brac" transform="rotate(300 12 12)"/></svg>
           <div>
-            <h3>Aire condicionat</h3>
+            <h3><a href="/serveis/aire-condicionat">Aire condicionat</a></h3>
             <p>Càrrega del gas i reparació de la climatització.</p>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="1.5"/><path d="M7 7V5h3v2M14 7V5h3v2"/><path d="M6.5 13h3M8 11.5v3M14.5 13h3"/></svg>
           <div>
-            <h3>Electricitat i bateries</h3>
+            <h3><a href="/serveis/electricitat-bateries">Electricitat i bateries</a></h3>
             <p>Avaries elèctriques i canvi de bateries.</p>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16.5V20"/><path d="M6 11h3l1.5-3 2.5 6 1.5-3H18"/></svg>
           <div>
-            <h3>Diagnosi electrònica</h3>
+            <h3><a href="/serveis/diagnosi-electronica">Diagnosi electrònica</a></h3>
             <p>Llegim les avaries de la centraleta i trobem l'origen del problema.</p>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 14.5H6M15 14.5h3"/><rect x="6" y="11" width="9" height="7" rx="3.5"/><circle cx="20.3" cy="12" r="1.3"/><circle cx="18.8" cy="8.3" r="1"/></svg>
           <div>
-            <h3>Tub d'escapament</h3>
+            <h3><a href="/serveis/escapament">Tub d'escapament</a></h3>
             <p>Reparació i substitució de l'escapament.</p>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="14" height="5" rx="1"/><path d="M17 6.5h2.5v5H11v2.5"/><rect x="9.5" y="14" width="3" height="6.5" rx="1"/></svg>
           <div>
-            <h3>Planxa i pintura</h3>
+            <h3><a href="/serveis/planxa-pintura">Planxa i pintura</a></h3>
             <p>Reparació de cops i pintura de la carrosseria.</p>
           </div>
         </li>
@@ -402,6 +492,49 @@ p { margin: 0 0 1rem; }
           <p>Quan el cotxe està a punt, et truquem perquè el vinguis a buscar.</p>
         </li>
       </ol>
+    </div>
+  </section>
+
+  <section class="seccio preguntes" id="preguntes" aria-labelledby="titol-preguntes">
+    <div class="wrap">
+      <div class="intro">
+        <h2 id="titol-preguntes">Preguntes freqüents</h2>
+        <p>Si no hi trobes el que busques, truca'ns al <a href="tel:+34972503067">972 503 067</a>.</p>
+      </div>
+      <div class="faq">
+          <details>
+            <summary>Cal demanar hora?</summary>
+            <p>Et recomanem trucar abans al 972 503 067 perquè et puguem donar dia i hora i el cotxe estigui el mínim temps possible al taller. Si és urgent o el cotxe no arrenca, truca'ns igualment i mirarem com t'hi podem ajudar.</p>
+          </details>
+          <details>
+            <summary>Treballeu amb totes les marques?</summary>
+            <p>Sí, reparem i fem el manteniment de cotxes i furgonetes de totes les marques.</p>
+          </details>
+          <details>
+            <summary>Feu pressupost abans de reparar?</summary>
+            <p>Sí. Abans de començar et diem què cal fer i quant costarà. Tens dret a un pressupost per escrit, vàlid com a mínim 12 dies hàbils, i no fem cap reparació sense la teva conformitat. Si durant la feina trobem una altra avaria, t'avisem abans de continuar.</p>
+          </details>
+          <details>
+            <summary>Quina garantia tenen les reparacions?</summary>
+            <p>Totes les reparacions tenen la garantia legal de 3 mesos o 2.000 quilòmetres. Els recanvis nous tenen, a més, la seva pròpia garantia.</p>
+          </details>
+          <details>
+            <summary>Si el cotxe és en garantia, puc fer-hi el manteniment aquí?</summary>
+            <p>Sí. La normativa europea permet fer el manteniment en un taller independent sense perdre la garantia del fabricant, sempre que se segueixi el pla de manteniment de la marca i es facin servir recanvis de qualitat equivalent. Ho deixem tot detallat a la factura.</p>
+          </details>
+          <details>
+            <summary>Quan he de passar la ITV?</summary>
+            <p>Els turismes estan exempts fins als 4 anys; després, cada 2 anys fins als 10 i, a partir d'aleshores, cada any. Abans d'anar-hi, et podem fer la pre-ITV.</p>
+          </details>
+          <details>
+            <summary>Quant triga una reparació?</summary>
+            <p>Depèn de la feina i de si cal demanar recanvis. Un canvi d'oli o de pneumàtics sovint es pot fer el mateix dia; per a reparacions més grans, et donem una data aproximada d'entrega amb el pressupost.</p>
+          </details>
+          <details>
+            <summary>Com puc pagar?</summary>
+            <p>Pots pagar en efectiu o amb targeta.</p>
+          </details>
+      </div>
     </div>
   </section>
 

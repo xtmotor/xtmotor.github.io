@@ -2,20 +2,188 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://xtmotor.es/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/"/>
   </url>
   <url>
     <loc>https://xtmotor.es/es/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/"/>
   </url>
   <url>
-    <loc>https://xtmotor.es/aviso-legal.html</loc>
+    <loc>https://xtmotor.es/serveis/mecanica-general</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/mecanica-general"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/mecanica-general"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/mecanica-general"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/es/servicios/mecanica-general</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/mecanica-general"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/mecanica-general"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/mecanica-general"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/serveis/revisio-manteniment</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/revisio-manteniment"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/revision-mantenimiento"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/revisio-manteniment"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/es/servicios/revision-mantenimiento</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/revisio-manteniment"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/revision-mantenimiento"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/revisio-manteniment"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/serveis/pre-itv</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/pre-itv"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/pre-itv"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/pre-itv"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/es/servicios/pre-itv</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/pre-itv"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/pre-itv"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/pre-itv"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/serveis/pneumatics</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/pneumatics"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/neumaticos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/pneumatics"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/es/servicios/neumaticos</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/pneumatics"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/neumaticos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/pneumatics"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/serveis/frens</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/frens"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/frenos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/frens"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/es/servicios/frenos</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/frens"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/frenos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/frens"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/serveis/embragatge-distribucio</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/embragatge-distribucio"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/embrague-distribucion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/embragatge-distribucio"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/es/servicios/embrague-distribucion</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/embragatge-distribucio"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/embrague-distribucion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/embragatge-distribucio"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/serveis/suspensio</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/suspensio"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/suspension"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/suspensio"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/es/servicios/suspension</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/suspensio"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/suspension"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/suspensio"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/serveis/aire-condicionat</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/aire-condicionat"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/aire-acondicionado"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/aire-condicionat"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/es/servicios/aire-acondicionado</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/aire-condicionat"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/aire-acondicionado"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/aire-condicionat"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/serveis/electricitat-bateries</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/electricitat-bateries"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/electricidad-baterias"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/electricitat-bateries"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/es/servicios/electricidad-baterias</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/electricitat-bateries"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/electricidad-baterias"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/electricitat-bateries"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/serveis/diagnosi-electronica</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/diagnosi-electronica"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/diagnostico-electronico"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/diagnosi-electronica"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/es/servicios/diagnostico-electronico</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/diagnosi-electronica"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/diagnostico-electronico"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/diagnosi-electronica"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/serveis/escapament</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/escapament"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/escape"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/escapament"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/es/servicios/escape</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/escapament"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/escape"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/escapament"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/serveis/planxa-pintura</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/planxa-pintura"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/chapa-pintura"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/planxa-pintura"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/es/servicios/chapa-pintura</loc>
+    <lastmod>2026-11-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://xtmotor.es/serveis/planxa-pintura"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://xtmotor.es/es/servicios/chapa-pintura"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xtmotor.es/serveis/planxa-pintura"/>
+  </url>
+  <url>
+    <loc>https://xtmotor.es/aviso-legal</loc>
     <lastmod>2026-11-18</lastmod>
   </url>
 </urlset>
